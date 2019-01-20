@@ -1,0 +1,43 @@
+﻿@model NagarHawlaGovtPrimarySchool.Models.ClassList
+@{
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+@{
+    ViewData["Active"] = "active";
+    ViewData["method"] = "Result";
+    ViewData["controller"] = "Result";
+    ViewData["option"] = "ফলাফল";
+}
+@section asideOption {
+    <li class="">
+        <a asp-controller="AdminStudentResultView" asp-action="Classes">
+            <i class="fa fa-dashboard"></i> <span>ফলাফল দেখুন</span>
+        </a>
+    </li>
+}
+
+<div class="container">
+    <div class="row custom_title" style="margin:100px 0 50px 0;">
+        <h3> শ্রেণি  পছন্দ করুন: &nbsp;</h3>
+    </div>
+    <form asp-controller="Result" asp-action="SectionSearchByClass" asp-route-ClassName="ClassName" asp-route-exam_type="exam_type" method="get">
+        <div class="row">
+            <div class="col-md-12" style="text-align: center;">
+                <div class="btn-group">
+                    <select id="custom_combobox_hieght" name="ClassName">
+                        @foreach (var data in Model.ClassAll)
+                        {
+                            <option value="@data.class_name">@data.class_name</option>
+                        }
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row custom_title" style="margin:10px 0;">
+            <input type="hidden" class="custom_form_button btn btn-default " name="exam_type" value="@ViewData["exam_type"]">
+            <input type="submit" class="custom_form_button btn btn-default " value="Submit">
+        </div>
+    </form>
+</div>
+
+<!-- /.content -->

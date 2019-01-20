@@ -1,0 +1,55 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20180402130240_RelClassSection Created.cs" />
+    <Compile Remove="Migrations\20180402130240_RelClassSection Created.Designer.cs" />
+    <Compile Remove="Migrations\20180404182532_AddSections.cs" />
+    <Compile Remove="Migrations\20180404182532_AddSections.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot\admin\bower_components\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="wwwroot\admin\bower_components\Ionicons\css\ionicons.css" />
+    <Content Include="wwwroot\admin\bower_components\Ionicons\css\ionicons.min.css" />
+    <Content Include="wwwroot\admin\bower_components\jvectormap\jquery-jvectormap.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.2" />
+    <PackageReference Include="System.Linq" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\admin\bower_components\bootstrap\dist\js\bootstrap.min.js" />
+    <None Include="wwwroot\admin\bower_components\chart.js\Chart.js" />
+    <None Include="wwwroot\admin\bower_components\fastclick\lib\fastclick.js" />
+    <None Include="wwwroot\admin\bower_components\jquery-slimscroll\jquery.slimscroll.min.js" />
+    <None Include="wwwroot\admin\bower_components\jquery-sparkline\dist\jquery.sparkline.min.js" />
+    <None Include="wwwroot\admin\bower_components\jquery\dist\core.js" />
+    <None Include="wwwroot\admin\bower_components\jquery\dist\jquery.js" />
+    <None Include="wwwroot\admin\bower_components\jquery\dist\jquery.min.js" />
+    <None Include="wwwroot\admin\bower_components\jquery\dist\jquery.min.map" />
+    <None Include="wwwroot\admin\bower_components\jquery\dist\jquery.slim.js" />
+    <None Include="wwwroot\admin\bower_components\jquery\dist\jquery.slim.min.js" />
+    <None Include="wwwroot\admin\bower_components\jquery\dist\jquery.slim.min.map" />
+    <None Include="wwwroot\admin\bower_components\jvectormap\jquery-jvectormap.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\StudentResultView\" />
+  </ItemGroup>
+
+</Project>

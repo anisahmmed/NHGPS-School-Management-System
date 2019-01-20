@@ -1,0 +1,94 @@
+﻿@model NagarHawlaGovtPrimarySchool.Models.SubjectList
+@{
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+@section Aboutcss{
+    <link href="~/css/popup1.css" rel="stylesheet" />
+}
+@{
+    ViewData["Active"] = "";
+    ViewData["method"] = "Home";
+    ViewData["controller"] = "Manager";
+    ViewData["option"] = "হোম";
+}
+@section asideOption {
+    <li class="">
+        <a asp-controller="Manager" asp-action="Admins">
+            <i class="fa fa-dashboard"></i> <span>এডমিনদের তথ্য</span>
+        </a>
+    </li>
+    <li class="active">
+        <a asp-controller="Edit" asp-action="EditPage">
+            <i class="fa fa-dashboard"></i> <span>সম্পাদন করুন</span>
+        </a>
+    </li>
+}
+
+<div class="row container">    <p></p>  </div>
+<form asp-controller="Edit" asp-action="" asp-route-subjectName="subjectName" method="get">
+    <div class="row container">
+        <div class="col col-md-1">
+            বিষয়ঃ
+        </div>
+        <div class="col col-md-3">
+            <select class="custom_resultForm" name="subjectName" id="subjectName">
+                @foreach (var data in Model.SubjectAll)
+                {
+                    <option value="@data.sub_name">@data.sub_name</option>
+                }
+            </select>
+        </div>
+        <div class="col col-md-6">
+            <a onclick="document.getElementById('addSubject').style.display='block';  addField() "><i class="fa fa-plus-square-o custom_admin_form" style="font-size:24px"></i></a>
+            <a onclick="document.getElementById('deleteSubject').style.display='block'; deleteField()"><i class="fa fa-trash-o custom_admin_form" style="font-size:24px"></i></a>
+        </div>
+    </div>
+</form>
+
+<section>
+
+
+    <!-- Subject Add -->
+    <div id="addSubject" class="modal">
+        <form class="modal-content animate" asp-controller="Edit" asp-action="" asp-route-subjectCodeAdd="subjectCodeAdd" asp-route-subjectNameAdd="subjectNameAdd" method="get">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('addSubject').style.display='none'" class="close" title="Close PopUp">&times;</span>
+                <img src="~/images/fff.png" alt="Avatar" class="avatar">
+                <h1 style="text-align:center">Add Subject</h1>
+            </div>
+            <div>
+                <input type="text" placeholder="Enter Subject code" name="subjectCodeAdd" id="updateField" required>
+                <input type="text" placeholder="Enter Subject name" name="subjectNameAdd" id="updateFields" required>
+                <button class="a" type="submit" formaction="SubjectAdd">submit</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        function addField() {
+            document.getElementById("updateField").value = "";
+            document.getElementById("updateFields").value = "";
+        }
+    </script>
+
+    <!-- Subject Delete -->
+    <div id="deleteSubject" class="modal">
+        <form class="modal-content animate" asp-controller="Edit" asp-action="" asp-route-subjectNameDelete="subjectNameDelete" method="get">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('deleteSubject').style.display='none'" class="close" title="Close PopUp">&times;</span>
+                <img src="~/images/fff.png" alt="Avatar" class="avatar">
+                <h1 style="text-align:center">Delete Subject</h1>
+            </div>
+            <div>
+                <input type="text" name="subjectNameDelete" id="deleteField" readonly>
+                <button class="a" type="submit" formaction="SubjectDelete">Yes</button>
+                <button class="a" type="submit">No</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        function deleteField() {
+            document.getElementById("deleteField").value = document.getElementById("subjectName").value;
+        }
+    </script>
+
+</section>

@@ -1,0 +1,66 @@
+﻿@model NagarHawlaGovtPrimarySchool.Models.User
+
+@{
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+@{
+    ViewData["Active"] = "";
+    ViewData["method"] = "Home";
+    ViewData["controller"] = "Manager";
+    ViewData["option"] = "হোম";
+}
+@section asideOption {
+    <li class="active">
+        <a asp-controller="Manager" asp-action="Admins">
+            <i class="fa fa-dashboard"></i> <span>এডমিনদের তথ্য</span>
+        </a>
+    </li>
+    <li class="">
+        <a asp-controller="Edit" asp-action="EditPage">
+            <i class="fa fa-dashboard"></i> <span>সম্পাদন করুন</span>
+        </a>
+    </li>
+}
+
+<div class="container">
+    <div><p></p></div>
+    <form asp-controller="Manager" asp-action="AdminInformationUpdate" asp-route-update="@Model.Email" method="post">
+        <div class="row custom_admin_form_paddingBottom">
+            <div class="col-md-5">
+                <label for="nid">ফার্স্ট নাম</label>
+                <input type="text" class="form-control" value="@Model.FirstName" name="FirstName" required>
+            </div>
+        </div>
+        <div class="row custom_admin_form_paddingBottom">
+            <div class="col-md-5">
+                <label for="nid">লাস্ট নাম</label>
+                <input type="text" class="form-control" value="@Model.LastName" name="LastName" required>
+            </div>
+        </div>
+        <div class="row custom_admin_form_paddingBottom">
+            <div class="col-md-5">
+                <label for="nid">অ্যাকাউন্ট টাইপ</label>
+                <input type="text" class="form-control" value="@Model.AccountType" name="AccountType" required>
+            </div>
+        </div>
+        <div class="row custom_admin_form_paddingBottom">
+            <div class="col-md-5">
+                <label for="nid">ইমেইল</label>
+                <input type="text" class="form-control" value="@Model.Email" name="Email" required>
+            </div>
+        </div>
+        <div class="row custom_admin_form_paddingBottom">
+            <div class="col-md-5">
+                <label for="nid">পাসওয়ার্ড</label>
+                <input type="text" class="form-control" value="@Model.Password" name="Password" required>
+            </div>
+        </div>
+        <div class="row container">
+            <input type="submit" class="custom_form_button btn btn-default " value="Submit">
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <script src="~/admin/dist/js/pages/dashboard2.js"></script>
+}

@@ -1,0 +1,115 @@
+﻿@model NagarHawlaGovtPrimarySchool.Models.ExamTypeList
+@{
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+@section Aboutcss{
+    <link href="~/css/popup1.css" rel="stylesheet" />
+}
+@{
+    ViewData["Active"] = "";
+    ViewData["method"] = "Home";
+    ViewData["controller"] = "Manager";
+    ViewData["option"] = "হোম";
+}
+@section asideOption {
+    <li class="">
+        <a asp-controller="Manager" asp-action="Admins">
+            <i class="fa fa-dashboard"></i> <span>এডমিনদের তথ্য</span>
+        </a>
+    </li>
+    <li class="active">
+        <a asp-controller="Edit" asp-action="EditPage">
+            <i class="fa fa-dashboard"></i> <span>সম্পাদন করুন</span>
+        </a>
+    </li>
+}
+
+<div class="row container">    <p></p>  </div>
+<form asp-controller="Edit" asp-action="" asp-route-examType="examType" method="get">
+    <div class="row container">
+        <div class="col col-md-2">
+            পরীক্ষার ধরণঃ
+        </div>
+        <div class="col col-md-3">
+            <select class="custom_resultForm" name="examType" id="examType">
+                @foreach (var data in Model.ExamTypeAll)
+                {
+                    <option value="@data.exam_type">@data.exam_type</option>
+                }
+            </select>
+        </div>
+
+        <div class="col col-md-6">
+            <a onclick="document.getElementById('updateExamType').style.display='block'; updateField()"><i class="fa fa-pencil-square-o custom_admin_form" style="font-size:24px"></i></a>
+            <a onclick="document.getElementById('addExamType').style.display='block';  addField() "><i class="fa fa-plus-square-o custom_admin_form" style="font-size:24px"></i></a>
+            <a onclick="document.getElementById('deleteExamType').style.display='block'; deleteField()"><i class="fa fa-trash-o custom_admin_form" style="font-size:24px"></i></a>
+        </div>
+    </div>
+</form>
+
+<section>
+
+    <!-- ExamType Update -->
+    <div id="updateExamType" class="modal">
+        <form class="modal-content animate" asp-controller="Edit" asp-action="" asp-route-examTypeUpdate="examTypeUpdate" method="get">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('updateExamType').style.display='none'" class="close" title="Close PopUp">&times;</span>
+                <img src="~/images/fff.png" alt="Avatar" class="avatar">
+                <h1 style="text-align:center">Update ExamType</h1>
+            </div>
+            <div>
+                <input type="text" name="examTypeUpdate" id="updateField" required>
+                <input type="hidden" name="exam_type" id="updateFields">
+                <button class="a" type="submit" formaction="ExamTypeUpdate">submit</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        function updateField() {
+            document.getElementById("updateField").value = document.getElementById("examType").value;
+            document.getElementById("updateFields").value = document.getElementById("examType").value;
+        }
+    </script>
+
+    <!-- ExamType Add -->
+    <div id="addExamType" class="modal">
+        <form class="modal-content animate" asp-controller="Edit" asp-action="" asp-route-examTypeAdd="examTypeAdd" method="get">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('addExamType').style.display='none'" class="close" title="Close PopUp">&times;</span>
+                <img src="~/images/fff.png" alt="Avatar" class="avatar">
+                <h1 style="text-align:center">Add ExamType</h1>
+            </div>
+            <div>
+                <input type="text" placeholder="Enter Exam Type" name="examTypeAdd" id="updateField" required>
+                <button class="a" type="submit" formaction="ExamTypeAdd">submit</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        function addField() {
+            document.getElementById("updateField").value = "";
+        }
+    </script>
+
+    <!-- ExamType Delete -->
+    <div id="deleteExamType" class="modal">
+        <form class="modal-content animate" asp-controller="Edit" asp-action="" asp-route-examTypeDelete="examTypeDelete" method="get">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('deleteExamType').style.display='none'" class="close" title="Close PopUp">&times;</span>
+                <img src="~/images/fff.png" alt="Avatar" class="avatar">
+                <h1 style="text-align:center">Delete ExamType</h1>
+            </div>
+            <div>
+                <input type="text" name="examTypeDelete" id="deleteField" readonly>
+                <button class="a" type="submit" formaction="ExamTypeDelete">Yes</button>
+                <button class="a" type="submit">No</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        function deleteField() {
+            document.getElementById("deleteField").value = document.getElementById("examType").value;
+        }
+    </script>
+
+</section>

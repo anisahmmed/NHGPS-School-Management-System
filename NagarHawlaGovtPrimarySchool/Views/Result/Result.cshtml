@@ -1,0 +1,42 @@
+﻿@model NagarHawlaGovtPrimarySchool.Models.ExamTypeList
+@{
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+@{
+    ViewData["Active"] = "active";
+    ViewData["method"] = "Result";
+    ViewData["controller"] = "Result";
+    ViewData["option"] = "ফলাফল";
+}
+@section asideOption {
+    <li class="">
+        <a asp-controller="AdminStudentResultView" asp-action="Classes">
+            <i class="fa fa-dashboard"></i> <span>ফলাফল দেখুন</span>
+        </a>
+    </li>
+}
+
+<div class="container">
+    <div class="row custom_title" style="margin:100px 0 50px 0;">
+        <h3> পরিক্ষার ধরণ  পছন্দ করুন: &nbsp;</h3>
+    </div>
+    <form asp-controller="Result" asp-action="ResultClass" asp-route-ClassName="exam_type" method="get">
+        <div class="row">
+            <div class="col-md-12" style="text-align: center;">
+                <div class="btn-group">
+                    <select id="custom_combobox_hieght" name="exam_type">
+                        @foreach (var data in Model.ExamTypeAll)
+                        {
+                            <option value="@data.exam_type">@data.exam_type</option>
+                        }
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row custom_title" style="margin:10px 0;">
+            <input type="submit" class="custom_form_button btn btn-default " value="Submit">
+        </div>
+    </form>
+</div>
+
+<!-- /.content -->

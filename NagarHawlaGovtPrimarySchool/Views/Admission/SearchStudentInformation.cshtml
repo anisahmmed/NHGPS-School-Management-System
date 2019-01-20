@@ -1,0 +1,44 @@
+﻿@{
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+@{
+    ViewData["Active"] = "";
+    ViewData["controller"] = "Admission";
+    ViewData["method"] = "Admission";
+    ViewData["option"] = "ভর্তি";
+}
+@section asideOption {
+    <li class="active">
+        <a asp-controller="Admission" asp-action="SearchStudentInformation">
+            <i class="fa fa-dashboard"></i> <span>শিক্ষার্থীদের তথ্য</span>
+        </a>
+    </li>
+}
+
+<div class="container">
+    <div class="row custom_title" style="margin:100px 0 50px 0;">
+        <h3> শ্রেণি  পছন্দ করুন: &nbsp;</h3>
+    </div>
+    <form asp-controller="Admission" asp-action="StudentSearchByClass" asp-route-ClassName="ClassName" method="get">
+        <div class="row">
+            <div class="col-md-12" style="text-align: center;">
+                <div class="btn-group">
+                    <select id="custom_combobox_hieght" name="ClassName">
+                        <option class="btn btn-primary" value="শিশু শ্রেণি">শিশু শ্রেণি</option>
+                        <option class="btn btn-primary" value="১ম শ্রেণি ">১ম শ্রেণি </option>
+                        <option class="btn btn-primary" value="২য় শ্রেণি">২য় শ্রেণি</option>
+                        <option class="btn btn-primary" value="৩য় শ্রেণি">৩য় শ্রেণি</option>
+                        <option class="btn btn-primary" value="৪র্থ শ্রেণি">৪র্থ শ্রেণি</option>
+                        <option class="btn btn-primary" value="৫ম শ্রেণি">৫ম শ্রেণি</option>
+                        <option class="btn btn-primary" value="৬ষ্ঠ শ্রেণি ">৬ষ্ঠ শ্রেণি </option>
+                        <option class="btn btn-primary" value="৭ম শ্রেণি ">৭ম শ্রেণি </option>
+                        <option class="btn btn-primary" value="৮ম শ্রেণি">৮ম শ্রেণি</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row custom_title" style="margin:10px 0;">
+            <input type="submit" class="custom_form_button btn btn-default " value="Submit">
+        </div>
+    </form>
+</div>

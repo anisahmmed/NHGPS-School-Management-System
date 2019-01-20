@@ -1,0 +1,98 @@
+.sj_plg_baner_type_1{
+	background-image: url(../images/Banner_Expand_03.png);
+    height: 330px;
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    width: 355px;	
+	display:none;
+	cursor:pointer;
+	z-index: 1000;
+}
+
+.sj_plg_baner_type_2{
+	background-image: url(../images/Banner_Collapse_03.png);
+    height: 104px;
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    width: 324px;	
+	cursor:pointer;	
+	display:none;
+	z-index: 1000;
+}
+
+.sj_plg_baner_type_3{
+	background-image: url(../images/Icon.png);
+    height: 43px;
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    width: 53px;
+	cursor:pointer;
+	display:none;
+	z-index: 1000;
+}
+
+.sj_relative{
+	position:relative;
+}
+
+.sj_absolute{
+	position:absolute;
+}
+
+.sj_btn_join_now{
+	top: 288px;
+    left: 135px;
+    width: 100px;
+    height: 28px;
+	cursor:pointer;	
+}
+
+.sj_plg_baner_type_1:hover .sj_btn_join_now{
+	background-image: url(../images/btn_hover.png);
+}
+
+.sj_btn_change{
+	background-image: url(../images/btn_close.png);
+	height: 20px;
+    width: 20px;
+    top: 27px;
+    left: -1px;
+	cursor:pointer;
+}
+
+.sj_plg_baner_type_1 .sj_btn_change{
+	top: 8px;
+    left: 2px;
+}
+
+@media all and (max-width: 768px) {
+	.sj_plg_baner_type_2{
+		background:none;
+		width: 200px;
+		height:60px;
+	}
+	
+	.sj_plg_baner_type_2 img{
+		width:100%;
+		height:auto;
+	}
+	.sj_plg_baner_type_1{
+		background:none;
+		width: 200px;
+		height: 180px;
+	}
+	
+	.sj_plg_baner_type_1 img{
+		width:100%;
+		height:auto;
+	}
+	.sj_btn_change{
+		top:20px;
+	}
+	.sj_plg_baner_type_1 .sj_btn_change{
+		top:6px;
+	}
+}

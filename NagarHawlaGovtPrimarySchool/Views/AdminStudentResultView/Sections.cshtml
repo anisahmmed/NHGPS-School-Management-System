@@ -1,0 +1,51 @@
+﻿@model NagarHawlaGovtPrimarySchool.Models.RelClassSectionList
+@{
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+@{
+    ViewData["Active"] = "";
+    ViewData["method"] = "Result";
+	ViewData["controller"] = "Result";
+    ViewData["option"] = "ফলাফল";
+}
+@section asideOption {
+    <li class="active">
+        <a asp-controller="AdminStudentResultView" asp-action="Classes">
+            <i class="fa fa-dashboard"></i> <span>ফলাফল দেখুন </span>
+        </a>
+    </li>
+}
+
+<div class="container">
+    <div class="row custom_title" style="margin:100px 0 50px 0;">
+        <h3> সেকশন পছন্দ করুন: &nbsp;</h3>
+    </div>
+    <form asp-controller="AdminStudentResultView" asp-action="StudentList" asp-route-className="className" asp-route-sectionName="sectionName" method="get">
+        <div class="row">
+            <div class="col-md-12" style="text-align: center;">
+                <div class="btn-group">
+                    <select id="custom_combobox_hieght" name="sectionName">
+                        @foreach (var data in Model.SectionAll)
+                        {
+                            <option value="@data.section_name">@data.section_name</option>
+                        }
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row custom_title" style="margin:10px 0;">
+            <input type="hidden" class="custom_form_button btn btn-default " name="className" id="className">
+            <input type="submit" class="custom_form_button btn btn-default " onmouseover="subjectaddField()" value="Submit">
+        </div>
+    </form>
+</div>
+<script>
+        function subjectaddField() {
+            var url_string = window.location.href;
+            var url = new URL(url_string);
+            var c = url.searchParams.get("ClassName");	
+            document.getElementById("className").value = c.toString();
+        }
+</script>
+
+<!-- /.content -->

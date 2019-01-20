@@ -1,0 +1,133 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>নগর হাওলা সরকারি প্রাথমিক বিদ্যালয়</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="~/admin/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="~/admin/bower_components/jvectormap/jquery-jvectormap.css">
+    <link rel="stylesheet" href="~/admin/dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="~/admin/dist/css/skins/_all-skins.min.css">
+    @RenderSection("Aboutcss",required: false)
+    <link rel="stylesheet" href="~/css/custom.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+        <header class="main-header">
+            <a href="index2.html" class="logo">
+                <span class="logo-mini"><b>A</b>LT</span>
+                <span class="logo-lg"><b>Admin</b>Panel</span>
+            </a>
+            <nav class="navbar navbar-static-top">
+                <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="~/images/Admin.png" class="user-image" alt="User Image">
+                                <span class="hidden-xs">@TempData["userName"]</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="user-header">
+                                    <img src="~/images/Admin.png" class="img-circle" alt="User Image">
+                                    <p>
+                                        @TempData["userName"]
+                                    </p>
+                                </li>
+                                <li class="user-body">
+
+                                    <!-- /.row -->
+                                </li>
+                                <!-- Menu Footer-->
+                                <li class="user-footer">
+                                    <div class="pull-left">
+                                        <a href="#" class="btn btn-default btn-flat" style="color: white;">Profile</a>
+                                    </div>
+                                    <div class="pull-right">
+                                        <a asp-controller="Login" asp-action="Logout" class="btn btn-default btn-flat" style="color: white;">Sign out</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Control Sidebar Toggle Button -->
+                        <li>
+                            <a href="#" data-toggle="control-sideba"><i class="fa fa-gea"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- Sidebar user panel -->
+                <div class="user-panel">
+                    <div class="pull-left image">
+                        <img src="~/images/Admin.png" class="img-circle" alt="User Image">
+                    </div>
+                    <div class="pull-left info">
+                        <p>@TempData["userName"]</p>
+                        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                    </div>
+                </div>
+                <!-- search form -->
+                <form asp-controller="Admission" asp-action="SearchByStudentId" asp-route-studentId="studentId" method="get" class="sidebar-form">
+                    <div class="input-group">
+                        <input type="text" name="studentId" class="form-control" placeholder="সার্চ করুন..." required>
+                        <span class="input-group-btn">
+                            <button type="submit" id="search-btn" class="btn btn-flat">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+                <!-- /.search form -->
+                <ul class="sidebar-menu" data-widget="tree">
+                    <li class="header"></li>
+                    <li class="@ViewData["Active"]">
+                        <a asp-controller="@ViewData["controller"]" asp-action="@ViewData["method"]">
+                            <i class="fa fa-dashboard"></i> <span>@ViewData["option"]</span>
+                        </a>
+                    </li>
+                    @RenderSection("asideOption", required: false)
+                </ul>
+            </section>
+        </aside>
+        <div class="content-wrapper">
+
+            <!----------------------------------------------------------------
+            ----------------------------------------------------------------->
+            @RenderBody()
+            <!----------------------------------------------------------------
+            ----------------------------------------------------------------->
+        </div>
+        <!-- /.content-wrapper -->
+        <footer class="main-footer">
+            <div class="pull-right hidden-xs">
+            </div>
+            <strong>কপিরাইট &copy; ২০১৮ <a asp-controller="Home" asp-action="Index">নগর হাওলা সরকারি প্রাথমিক বিদ্যালয়</a>- </strong>সমস্ত অধিকার সংরক্ষিত।
+        </footer>
+        <div class="control-sidebar-bg"></div>
+    </div>
+    <script src="~/admin/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="~/admin/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="~/admin/bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="~/admin/dist/js/adminlte.min.js"></script>
+    <script src="~/admin/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+    <script src="~/admin/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="~/admin/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="~/admin/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="~/admin/bower_components/chart.js/Chart.js"></script>
+    <script src="~/admin/dist/js/pages/dashboard2.js"></script>
+    <script src="~/admin/dist/js/demo.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,132 @@
+﻿@model NagarHawlaGovtPrimarySchool.Models.AdminList
+
+@{
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+@{
+    ViewData["Active"] = "";
+    ViewData["method"] = "Home";
+    ViewData["controller"] = "Manager";
+    ViewData["option"] = "হোম";
+}
+@section asideOption {
+    <li class="active">
+        <a asp-controller="Manager" asp-action="Admins">
+            <i class="fa fa-dashboard"></i> <span>এডমিনদের তথ্য</span>
+        </a>
+    </li>
+    <li class="">
+        <a asp-controller="Edit" asp-action="EditPage">
+            <i class="fa fa-dashboard"></i> <span>সম্পাদন করুন</span>
+        </a>
+    </li>
+}
+
+<div class="container">
+    <div><p></p></div>
+    <a asp-controller="Manager" asp-action="AdminInformationAdd" class="custom_form_button btn btn-default " style="text-align:center;font-size:15px; width:200px; margin:0;">এডমিন / শিক্ষার্থী  এড  করুন </a>
+    <p></p><p></p><p></p>
+    <h3 style="color:green;">এডমিন</h3>
+    <table class="custom_admin_student_information_table">
+        <tr>
+            <th>ফার্স্ট নাম </th>
+            <th>লাস্ট নাম</th>
+            <th>ইমেইল </th>
+            <th>পাসওয়ার্ড</th>
+            <th>অ্যাকাউন্ট টাইপ</th>
+            <th>অন্যান্য</th>
+        </tr>
+        @foreach (var data in Model.AdminAll)
+        {
+            if (data.AccountType != "Student")
+            {
+                <tr title="">
+                    <td class="showDetails pointer">@data.FirstName</td>
+                    <td class="showDetails pointer">@data.LastName</td>
+                    <td class="showDetails pointer">@data.Email</td>
+                    <td class="showDetails pointer">@data.Password</td>
+                    <td class="showDetails pointer">@data.AccountType</td>
+                    <td class="showDetails pointer">
+                        <a asp-controller="Manager" asp-action="AdminInformationUpdate"
+                           asp-route-update="@data.Email">আপডেট</a>|
+                        <a asp-controller="Manager" asp-action="AdminInformationDelete"
+                           asp-route-delete="@data.Email">ডিলিট</a>
+                    </td>
+                </tr>
+            }
+        }
+
+
+    </table>
+    <p></p><p></p><p></p>
+    <h3 style="color:green;">শিক্ষার্থী</h3>
+
+    <table class="custom_admin_student_information_table">
+        <tr>
+            <th>ফার্স্ট নাম </th>
+            <th>লাস্ট নাম</th>
+            <th>আইডি </th>
+            <th>পাসওয়ার্ড</th>
+            <th>অ্যাকাউন্ট টাইপ</th>
+            <th>অন্যান্য</th>
+        </tr>
+        @foreach (var data in Model.AdminAll)
+        {
+            if (data.AccountType == "Student")
+            {
+                <tr title="">
+                    <td class="showDetails pointer">@data.FirstName</td>
+                    <td class="showDetails pointer">@data.LastName</td>
+                    <td class="showDetails pointer">@data.Email</td>
+                    <td class="showDetails pointer">@data.Password</td>
+                    <td class="showDetails pointer">@data.AccountType</td>
+                    <td class="showDetails pointer">
+                        <a asp-controller="Manager" asp-action="AdminInformationUpdate"
+                           asp-route-update="@data.Email">আপডেট</a>|
+                        <a asp-controller="Manager" asp-action="AdminInformationDelete"
+                           asp-route-delete="@data.Email">ডিলিট</a>
+                    </td>
+                </tr>
+            }
+        }
+    </table>
+</div>
+<div id="printableArea" style="opacity:0;display:none;visibility:hidden;">
+    <h3 style="color:green;">শিক্ষার্থী</h3>
+
+    <table class="custom_admin_student_information_table">
+        <tr>
+            <th>ফার্স্ট নাম </th>
+            <th>লাস্ট নাম</th>
+            <th>আইডি </th>
+            <th>পাসওয়ার্ড</th>
+        </tr>
+        @foreach (var data in Model.AdminAll)
+        {
+            if (data.AccountType == "Student")
+            {
+                <tr title="">
+                    <td class="showDetails pointer">@data.FirstName</td>
+                    <td class="showDetails pointer">@data.LastName</td>
+                    <td class="showDetails pointer">@data.Email</td>
+                    <td class="showDetails pointer">@data.Password</td>
+                </tr>
+            }
+        }
+    </table>
+</div>
+
+</br><center><button style="color:green;" onclick="printDiv('printableArea')"><b>Print!</b></button></center>
+</br>
+<script type="text/javascript">
+    function printDiv(divName) {
+        var printContents = document.getElementById(divName).innerHTML;
+        var originalContents = document.body.innerHTML;
+        document.body.innerHTML = printContents;
+        window.print();
+        document.body.innerHTML = originalContents;
+    }
+</script>
+@section Scripts {
+    <script src="~/admin/dist/js/pages/dashboard2.js"></script>
+}

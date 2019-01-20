@@ -1,0 +1,204 @@
+﻿@model NagarHawlaGovtPrimarySchool.Models.Admission
+@{
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+@{
+    ViewData["Active"] = "";
+    ViewData["controller"] = "Admission";
+    ViewData["method"] = "Admission";
+    ViewData["option"] = "ভর্তি";
+}
+@section asideOption {
+<li class="active">
+    <a asp-controller="Admission" asp-action="SearchStudentInformation">
+        <i class="fa fa-dashboard"></i> <span>শিক্ষার্থীদের তথ্য</span>
+    </a>
+</li>
+}
+<div class="custom_admin_container">
+    <div class="row"><p></p></div>
+    <div class="row">
+        <div class="custom_admin_header col-md-12">
+            <span class="custom_admin_header2 h3">শিক্ষার্থীর তথ্য </span>
+        </div>
+    </div>
+    <form class="custom_admin_form form-inline" asp-controller="Admission" asp-action="StudentInformationIndividualUpdate" asp-route-update="@Model.StudentId" asp-route-ClassName="@Model.ClassName" method="post" role="form">
+        <div class="row">
+            <div class="custom_admin_header col-md-12"><p></p></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="name"> শিক্ষার্থী আইডিঃ   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <input type="text" class="form-control" name="StudentId" value="@Model.StudentId" readonly>
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <div class="btn-group">
+                            <label style="float:left" for="email">শ্রেণিঃ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                            <input type="text" class="form-control" name="ClassName" value="@Model.ClassName" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="name"> শাখা </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" class="form-control" name="Section" value="@Model.Section" required>
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="name"> ছাত্র/ ছাত্রীর নাম ( বাংলায় )-</label>
+                        <input type="text" class="form-control" name="StudentNameBangla" value="@Model.StudentNameBangla" required>
+                        <label class="custom_admin_form_paddingLeft" for="name">ইংরেজীতে ( বড় হাতের  ) -</label>
+                        <input type="text" class="form-control" name="StudentNameEnglish" value="@Model.StudentNameEnglish" required>
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="name"> পিতার নামঃ </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" class="form-control" name="FatherName" value="@Model.FatherName" required>
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="nid">পিতার এনআইডিঃ </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" class="form-control" name="FatherNID" value="@Model.FatherNID" required>
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="fatherMobile"> পিতার মোবাইল নাম্বারঃ  </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" class="form-control" name="FatherMobile" value="@Model.FatherMobile" required>
+                        <label class="custom_admin_form_paddingLeft" for="fatherDOB"> পিতার জন্ম তারিখঃ </label>
+                        <input type="text" class="form-control" name="FatherDOB" value="@Model.FatherDOB" required>
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="fatherMobile"> দাদার নামঃ </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" class="form-control" name="PaternalGrandFatherName" value="@Model.PaternalGrandFatherName" required>
+                        <label class="custom_admin_form_paddingLeft" for="fatherDOB"> দাদীর নামঃ</label>
+                        <input type="text" class="form-control" name="PaternalGrandMotherName" value="@Model.PaternalGrandMotherName" required>
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="name"> মাতার নামঃ </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" class="form-control" name="MotherName" value="@Model.MotherName" required>
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="nid"> মাতার এনআইডিঃ</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" class="form-control" name="MotherNID" value="@Model.MotherNID" required>
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="motherMobile"> মাতার মোবাইল নাম্বারঃ </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" class="form-control" name="MotherMobile" value="@Model.MotherMobile" required>
+                        <label class="custom_admin_form_paddingLeft" for="MotherDOB"> মাতার জন্ম তারিখ</label>
+                        <input type="text" class="form-control" name="MotherDOB" value="@Model.MotherDOB" required>
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="grandFatherNameMom">নানার নামঃ </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" class="form-control" name="MaternalGrandFatherName" value="@Model.MaternalGrandFatherName" required>
+                        <label class="custom_admin_form_paddingLeft" for="grandMotherName">নানীর নামঃ</label>
+                        <input type="text" class="form-control" name="MaternalGrandMotherName" value="@Model.MaternalGrandMotherName" required>
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="studentDOB"> ছাত্র/ছাত্রীর জন্ম তারিখঃ</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" class="form-control" name="StudentDOB" value="@Model.StudentDOB" required>
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="studentBirthCertificate">ছাত্র/ছাত্রীর জন্ম নিবন্ধন নম্বরঃ</label>
+                        <input type="text" class="form-control" name="StudentBirthCertificateNo" value="@Model.StudentBirthCertificateNo" required>
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="permanentAddress"> স্থায়ী ঠিকানাঃ </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label for="permanentAddressVillage"> গ্রামঃ  </label>
+                        <input type="text" class="form-control" name="PermanentVillage" value="@Model.PermanentVillage" required>
+                        <label for="permanentAddressPost">পোস্টঃ </label>
+                        <input type="text" class="form-control" name="PermanentPost" value="@Model.PermanentPost" required>
+                        <label for="permanentAddressPostCode">পোস্ট কোডঃ</label>
+                        <input type="text" class="form-control" name="PermanentPostCode" value="@Model.PermanentPostCode" required>
+                        <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        <label style="padding-top: 10px;" for="permanentAddressSubDistrict"> উপজেলাঃ  </label>
+                        <input type="text" class="form-control" name="PermanentSubDistrict" value="@Model.PermanentSubDistrict" required>
+                        <label class="custom_admin_form_paddingLeft custom_admin_form_paddingBottom" for="permanentAddressDistrict">জেলাঃ </label>
+                        <input type="text" class="form-control" name="PermanentDistrict" value="@Model.PermanentDistrict" required>
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="presentAddress"> বর্তমান ঠিকানাঃ </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label for="presentAddressVillage"> গ্রামঃ  </label>
+                        <input type="text" class="form-control" name="PresentVillage" value="@Model.PresentVillage" required>
+                        <label for="presentAddressPost">পোস্টঃ </label>
+                        <input type="text" class="form-control" name="PresentPost" value="@Model.PresentPost" required>
+                        <label for="presentAddressPostCode">পোস্ট কোডঃ</label>
+                        <input type="text" class="form-control" id="PresentPostCode" name="PresentPostCode" value="@Model.PresentPostCode" required>
+                        <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label style="padding-top: 10px;" for="presentAddressSubDistrict"> উপজেলাঃ  </label>
+                        <input type="text" class="form-control" name="PresentSubDistrict" value="@Model.PresentSubDistrict" required>
+                        <label class="custom_admin_form_paddingLeft" for="presentAddressDistrict">জেলাঃ </label>
+                        <input type="text" class="form-control" name="PresentDistrict" value="@Model.PresentDistrict" required>
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="name">* ভাড়াটিয়াদের জন্যঃ-  </label><br />
+                        <label for="name">বাড়ির মালিকের নামঃ  </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" class="form-control" name="HomeOwnerName" value="@Model.HomeOwnerName" required>
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="name">মালিকের মোবাইল নম্বরঃ  </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" class="form-control" name="HomeOwnerMobile" value="@Model.HomeOwnerMobile" required>
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="image"> ছাত্র/ছাত্রীর ছবি </label>
+                        <input type="file" name="studentImage" accept="image/*">
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="image">জন্ম নিবন্ধন </label>
+                        <input type="file" name="studentsBirthCertificate" accept="image/*">
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="image">বাবার জাতীয় পরিচয় পত্র  </label>
+                        <input type="file" name="fathersNIDCopy" accept="image/*">
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="image">মায়ের  জাতীয় পরিচয় পত্র</label>
+                        <input type="file" name="mothersNIDCopy" accept="image/*">
+                    </div>
+                </div>
+                <div class="row container">
+                    <input type="submit" class="custom_form_button btn btn-default " value="Submit">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

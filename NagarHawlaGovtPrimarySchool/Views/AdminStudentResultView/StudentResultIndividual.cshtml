@@ -1,0 +1,90 @@
+﻿@model NagarHawlaGovtPrimarySchool.Models.RelResultList
+@{
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+@{
+    ViewData["Active"] = "";
+    ViewData["controller"] = "Result";
+    ViewData["method"] = "Result";
+    ViewData["option"] = "ফলাফল";
+}
+@section asideOption {
+    <li class="active">
+        <a asp-controller="AdminStudentResultView" asp-action="Classes">
+            <i class="fa fa-dashboard"></i> <span>ফলাফল দেখুন </span>
+        </a>
+    </li>
+}
+
+<div id="printableArea">
+    <div class="container">
+
+        <h3 style="color:green;">প্রথম সাময়িক</h3>
+        <table class="custom_admin_student_information_table">
+            <tr>
+                <th>বিষয় </th>
+                <th>প্রাপ্ত নম্বর</th>
+            </tr>
+            @foreach (var data in Model.RelResultAll)
+            {
+                if (data.exam_type == "প্রথম সাময়িক")
+                {
+                    <tr title="Click Here to See Details">
+                        <td class="showDetails pointer">@data.subject_name</td>
+                        <td class="showDetails pointer">@data.marks</td>
+                    </tr>
+                }
+
+            }
+        </table>
+
+        <h3 style="color:green;">দ্বিতীয় সাময়িক</h3>
+        <table class="custom_admin_student_information_table">
+            <tr>
+                <th>বিষয় </th>
+                <th>প্রাপ্ত নম্বর</th>
+            </tr>
+            @foreach (var data in Model.RelResultAll)
+            {
+                if (data.exam_type == "দ্বিতীয় সাময়িক ")
+                {
+                    <tr title="Click Here to See Details">
+                        <td class="showDetails pointer">@data.subject_name</td>
+                        <td class="showDetails pointer">@data.marks</td>
+                    </tr>
+                }
+
+            }
+        </table>
+
+        <h3 style="color:green;">বার্ষিক</h3>
+        <table class="custom_admin_student_information_table">
+            <tr>
+                <th>বিষয় </th>
+                <th>প্রাপ্ত নম্বর</th>
+            </tr>
+            @foreach (var data in Model.RelResultAll)
+            {
+                if (data.exam_type == "বার্ষিক ")
+                {
+                    <tr title="Click Here to See Details">
+                        <td class="showDetails pointer">@data.subject_name</td>
+                        <td class="showDetails pointer">@data.marks</td>
+                    </tr>
+                }
+
+            }
+        </table>
+    </div>
+</div>
+</br><center><button style="color:green;" onclick="printDiv('printableArea')"><b>Print!</b></button></center>
+		  </br>
+<script type="text/javascript">
+function printDiv(divName) {
+    var printContents = document.getElementById(divName).innerHTML;
+    var originalContents = document.body.innerHTML;
+    document.body.innerHTML = printContents;
+    window.print();
+    document.body.innerHTML = originalContents;
+    }
+</script>

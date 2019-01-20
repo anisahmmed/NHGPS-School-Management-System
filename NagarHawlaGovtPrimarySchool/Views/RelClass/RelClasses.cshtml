@@ -1,0 +1,180 @@
+﻿@model NagarHawlaGovtPrimarySchool.Models.RelClass
+@{
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+@section Aboutcss{
+    <link href="~/css/popup1.css" rel="stylesheet" />
+}
+@{
+    ViewData["Active"] = "";
+    ViewData["method"] = "Home";
+    ViewData["controller"] = "Manager";
+    ViewData["option"] = "হোম";
+}
+@section asideOption {
+    <li class="">
+        <a asp-controller="Manager" asp-action="Admins">
+            <i class="fa fa-dashboard"></i> <span>এডমিনদের তথ্য</span>
+        </a>
+    </li>
+    <li class="active">
+        <a asp-controller="Edit" asp-action="EditPage">
+            <i class="fa fa-dashboard"></i> <span>সম্পাদন করুন</span>
+        </a>
+    </li>
+}
+
+<div class="row container">    <p></p>  </div>
+<form asp-controller="Result" asp-action="" method="get">
+    <div class="row container">
+        <div class="col col-md-1">
+            বিষয়ঃ
+        </div>
+        <div class="col col-md-3">
+            <select class="custom_resultForm" name="subjectName" id="subjectName">
+                @foreach (var data in Model.SubjectAll)
+                {
+                    <option value="@data.subject_name">@data.subject_name</option>
+                }
+            </select>
+        </div>
+        <div class="col col-md-2">
+            <a onclick="document.getElementById('addSubject').style.display='block';  subjectaddField() "><i class="fa fa-plus-square-o custom_admin_form" style="font-size:24px"></i></a>
+            <a onclick="document.getElementById('deleteSubject').style.display='block'; subjectdeleteField()"><i class="fa fa-trash-o custom_admin_form" style="font-size:24px"></i></a>
+        </div>
+        <div class="col col-md-1">
+            শাখাঃ
+        </div>
+        <div class="col col-md-3">
+            <select class="custom_resultForm" name="sectionName" id="sectionName">
+                @foreach (var data in Model.SectionAll)
+                {
+                    <option value="@data.section_name">@data.section_name</option>
+                }
+            </select>
+        </div>
+        <div class="col col-md-2">
+            <a onclick="document.getElementById('addSection').style.display='block';  sectionaddField() "><i class="fa fa-plus-square-o custom_admin_form" style="font-size:24px"></i></a>
+            <a onclick="document.getElementById('deleteSection').style.display='block'; sectiondeleteField()"><i class="fa fa-trash-o custom_admin_form" style="font-size:24px"></i></a>
+        </div>
+
+    </div>
+</form>
+
+
+<section>
+    <!-- Subject Add -->
+    <div id="addSubject" class="modal">
+        <form class="modal-content animate" asp-controller="RelClass" asp-action="" asp-route-subjectNameAdd="subjectNameAdd" asp-route-className="className" method="get">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('addSubject').style.display='none'" class="close" title="Close PopUp">&times;</span>
+                <img src="~/images/fff.png" alt="Avatar" class="avatar">
+                <h1 style="text-align:center">Add Subject</h1>
+            </div>
+            <div style="text-align:center">
+                <select id="custom_combobox_hieght" class="custom_resultForm" name="subjectNameAdd" >
+                    @foreach (var data in Model.SubjectList)
+                    {
+                        <option value="@data.sub_name">@data.sub_name</option>
+                    }
+                </select>
+                <input type="hidden" name="className" id="subjectupdateField">
+                <button class="a" type="submit" formaction="SubjectAdd">submit</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        function subjectaddField() {
+            var url_string = window.location.href;
+            var url = new URL(url_string);
+            var c = url.searchParams.get("className");
+            document.getElementById("subjectupdateField").value = c.toString();
+        }
+    </script>
+
+    <!-- Subject Delete -->
+    <div id="deleteSubject" class="modal">
+        <form class="modal-content animate" asp-controller="RelClass" asp-action="" asp-route-subjectNameDelete="subjectNameDelete" asp-route-className="className" method="get">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('deleteSubject').style.display='none'" class="close" title="Close PopUp">&times;</span>
+                <img src="~/images/fff.png" alt="Avatar" class="avatar">
+                <h1 style="text-align:center">Delete Subject</h1>
+            </div>
+            <div>
+                <input type="text" name="subjectNameDelete" id="subjectdeleteField" readonly>
+                <input type="hidden" name="className" id="subjectclassName">
+                <button class="a" type="submit" formaction="SubjectDelete">Yes</button>
+                <button class="a" type="submit">No</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        function subjectdeleteField() {
+            var url_string = window.location.href;
+            var url = new URL(url_string);
+            var c = url.searchParams.get("className");
+            document.getElementById("subjectclassName").value = c.toString();
+            document.getElementById("subjectdeleteField").value = document.getElementById("subjectName").value;
+        }
+    </script>
+
+</section>
+
+<section>
+    <!-- Section Add -->
+    <div id="addSection" class="modal">
+        <form class="modal-content animate" asp-controller="RelClass" asp-action="" asp-route-sectionNameAdd="sectionNameAdd" asp-route-className="className" method="get">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('addSection').style.display='none'" class="close" title="Close PopUp">&times;</span>
+                <img src="~/images/fff.png" alt="Avatar" class="avatar">
+                <h1 style="text-align:center">Add Section</h1>
+            </div>
+            <div style="text-align:center">
+                <select id="custom_combobox_hieght" class="custom_resultForm" name="sectionNameAdd" id="section">
+                    @foreach (var data in Model.SectionList)
+                    {
+                        <option value="@data.section">@data.section</option>
+                    }
+                </select>
+                <input type="hidden" name="className" id="sectionupdateField">
+                <button class="a" type="submit" formaction="SectionAdd">submit</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        function sectionaddField() {
+            var url_string = window.location.href;
+            var url = new URL(url_string);
+            var c = url.searchParams.get("className");
+            document.getElementById("sectionupdateField").value = c.toString();
+        }
+    </script>
+
+    <!-- Section Delete -->
+    <div id="deleteSection" class="modal">
+        <form class="modal-content animate" asp-controller="RelClass" asp-action="" asp-route-sectionNameDelete="sectionNameDelete" asp-route-className="className" method="get">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('deleteSection').style.display='none'" class="close" title="Close PopUp">&times;</span>
+                <img src="~/images/fff.png" alt="Avatar" class="avatar">
+                <h1 style="text-align:center">Delete Section</h1>
+            </div>
+            <div>
+                <input type="text" name="sectionNameDelete" id="sectiondeleteField" readonly>
+                <input type="hidden" name="className" id="sectionclassName">
+                <button class="a" type="submit" formaction="SectionDelete">Yes</button>
+                <button class="a" type="submit">No</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        function sectiondeleteField() {
+            var url_string = window.location.href;
+            var url = new URL(url_string);
+            var c = url.searchParams.get("className");
+            document.getElementById("sectionclassName").value = c.toString();
+            document.getElementById("sectiondeleteField").value = document.getElementById("sectionName").value;
+        }
+    </script>
+
+</section>

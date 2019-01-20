@@ -1,0 +1,83 @@
+﻿@model NagarHawlaGovtPrimarySchool.Models.RelClassSubjectList
+@{
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+@{
+    ViewData["Active"] = "active";
+    ViewData["method"] = "Result";
+    ViewData["controller"] = "Result";
+    ViewData["option"] = "ফলাফল";
+}
+@section asideOption {
+    <li class="">
+        <a asp-controller="AdminStudentResultView" asp-action="Classes">
+            <i class="fa fa-dashboard"></i> <span>ফলাফল দেখুন</span>
+        </a>
+    </li>
+}
+<div class="custom_admin_container">
+    <div class="row"><p></p></div>
+    <form class="custom_admin_form form-inline" asp-controller="Result" method="post" role="form">
+        <div class="row">
+            <div class="custom_admin_header col-md-12"><p></p></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="name"> শিক্ষার্থী আইডিঃ   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <input type="text" class="form-control" name="student_id" value="@ViewData["studentId"]" readonly>
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <div class="btn-group">
+                            <label style="float:left" for="email">শ্রেণিঃ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                            <input type="text" class="form-control" name="class_name" value="@ViewData["className"]" readonly>
+                        </div>
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <div class="btn-group">
+                            <label style="float:left" for="email">সেকশন &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                            <input type="text" class="form-control" name="section" value="@ViewData["sectionName"]" readonly>
+                        </div>
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <div class="btn-group">
+                            <label style="float:left" for="email">পরিক্ষার ধরণ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                            <input type="text" class="form-control" name="exam_type" value="@ViewData["exam_type"]" readonly>
+                        </div>
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <div class="btn-group">
+                            <label style="float:left" for="email">বিষয়ঃ &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                            <select id="custom_combobox_hieght" name="subject_name">
+                                @foreach (var data in Model.RelClassSubjectAll)
+                                {
+                                    <option value="@data.subject_name">@data.subject_name</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <div class="btn-group">
+                            <label style="float:left" for="email">প্রাপ্ত নম্বরঃ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                            <input type="text" class="form-control" name="marks" value="" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="row container">
+                    <input type="submit" class="custom_form_button btn btn-default " value="Submit">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

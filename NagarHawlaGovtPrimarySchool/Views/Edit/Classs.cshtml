@@ -1,0 +1,121 @@
+﻿@model NagarHawlaGovtPrimarySchool.Models.ClassList
+@{
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+@section Aboutcss{
+    <link href="~/css/popup1.css" rel="stylesheet" />
+}
+@{
+    ViewData["Active"] = "";
+    ViewData["method"] = "Home";
+    ViewData["controller"] = "Manager";
+    ViewData["option"] = "হোম";
+}
+@section asideOption {
+    <li class="">
+        <a asp-controller="Manager" asp-action="Admins">
+            <i class="fa fa-dashboard"></i> <span>এডমিনদের তথ্য</span>
+        </a>
+    </li>
+    <li class="active">
+        <a asp-controller="Edit" asp-action="EditPage">
+            <i class="fa fa-dashboard"></i> <span>সম্পাদন করুন</span>
+        </a>
+    </li>
+}
+
+<div class="row container">    <p></p>  </div>
+<form asp-controller="Edit" asp-action="" asp-route-className="className" method="get">
+    <div class="row container">
+        <div class="col col-md-1">
+            শ্রেণিঃ
+        </div>
+        <div class="col col-md-3">
+            <select class="custom_resultForm" name="className" id="className">
+                @foreach (var data in Model.ClassAll)
+                {
+                    <option value="@data.class_name">@data.class_name</option>
+                }
+            </select>
+        </div>
+
+        <div class="col col-md-6">
+
+            <a onclick="document.getElementById('updateClass').style.display='block'; updateField()"><i class="fa fa-pencil-square-o custom_admin_form" style="font-size:24px"></i></a>
+            <a onclick="document.getElementById('addClass').style.display='block';  addField() "><i class="fa fa-plus-square-o custom_admin_form" style="font-size:24px"></i></a>
+            <a onclick="document.getElementById('deleteClass').style.display='block'; deleteField()"><i class="fa fa-trash-o custom_admin_form" style="font-size:24px"></i></a>
+        </div>
+        <div class="col col-md-2">
+            <button class="custom_EditButton" type="submit" formaction="ClassOkButton">OK</button>
+        </div>
+    </div>
+</form>
+
+<section>
+
+    <!-- Class Update -->
+    <div id="updateClass" class="modal">
+        <form class="modal-content animate" asp-controller="Result" asp-action="" asp-route-classNameUpdate="classNameUpdate" method="get">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('updateClass').style.display='none'" class="close" title="Close PopUp">&times;</span>
+                <img src="~/images/fff.png" alt="Avatar" class="avatar">
+                <h1 style="text-align:center">Update Class</h1>
+            </div>
+            <div>
+                <input type="text" name="classNameUpdate" id="updateField" required>
+                <input type="hidden" name="class_name" id="updateFields">
+                <button class="a" type="submit" formaction="ClassUpdate">submit</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        function updateField() {
+            document.getElementById("updateField").value = document.getElementById("className").value;
+            document.getElementById("updateFields").value = document.getElementById("className").value;
+        }
+    </script>
+
+    <!-- Class Add -->
+    <div id="addClass" class="modal">
+        <form class="modal-content animate" asp-controller="Result" asp-action="" asp-route-classNameAdd="classNameAdd" method="get">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('addClass').style.display='none'" class="close" title="Close PopUp">&times;</span>
+                <img src="~/images/fff.png" alt="Avatar" class="avatar">
+                <h1 style="text-align:center">Add Class</h1>
+            </div>
+            <div>
+                <input type="text" placeholder="Enter Class name" name="classNameAdd" id="updateField" required>
+                <button class="a" type="submit" formaction="ClassAdd">submit</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        function addField() {
+            document.getElementById("updateField").value = "";
+        }
+    </script>
+
+    <!-- Class Delete -->
+    <div id="deleteClass" class="modal">
+        <form class="modal-content animate" asp-controller="Result" asp-action="" asp-route-classNameDelete="classNameDelete" method="get">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('deleteClass').style.display='none'" class="close" title="Close PopUp">&times;</span>
+                <img src="~/images/fff.png" alt="Avatar" class="avatar">
+                <h1 style="text-align:center">Delete Class</h1>
+            </div>
+            <div>
+                <input type="text" name="classNameDelete" id="deleteField" readonly>
+                <button class="a" type="submit" formaction="ClassDelete">Yes</button>
+                <button class="a" type="submit">No</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        function deleteField() {
+            document.getElementById("deleteField").value = document.getElementById("className").value;
+        }
+    </script>
+
+</section>
+

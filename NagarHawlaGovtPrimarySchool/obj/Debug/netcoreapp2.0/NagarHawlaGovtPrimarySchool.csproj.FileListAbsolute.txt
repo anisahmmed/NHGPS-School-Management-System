@@ -1,0 +1,55 @@
+C:\Users\HP\Desktop\Another Update\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\bin\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.deps.json
+C:\Users\HP\Desktop\Another Update\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\bin\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.runtimeconfig.json
+C:\Users\HP\Desktop\Another Update\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\bin\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.runtimeconfig.dev.json
+C:\Users\HP\Desktop\Another Update\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\bin\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.dll
+C:\Users\HP\Desktop\Another Update\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\bin\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.pdb
+C:\Users\HP\Desktop\Another Update\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\obj\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.csprojResolveAssemblyReference.cache
+C:\Users\HP\Desktop\Another Update\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\obj\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\Another Update\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\obj\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\Another Update\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\obj\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.AssemblyInfo.cs
+C:\Users\HP\Desktop\Another Update\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\obj\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.dll
+C:\Users\HP\Desktop\Another Update\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\obj\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.pdb
+C:\Users\HP\Desktop\All Files\CSC 439\Website\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\bin\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.deps.json
+C:\Users\HP\Desktop\All Files\CSC 439\Website\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\bin\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.runtimeconfig.json
+C:\Users\HP\Desktop\All Files\CSC 439\Website\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\bin\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.runtimeconfig.dev.json
+C:\Users\HP\Desktop\All Files\CSC 439\Website\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\bin\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.dll
+C:\Users\HP\Desktop\All Files\CSC 439\Website\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\bin\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.pdb
+C:\Users\HP\Desktop\All Files\CSC 439\Website\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\obj\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.csprojResolveAssemblyReference.cache
+C:\Users\HP\Desktop\All Files\CSC 439\Website\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\obj\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\All Files\CSC 439\Website\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\obj\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\All Files\CSC 439\Website\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\obj\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.AssemblyInfo.cs
+C:\Users\HP\Desktop\All Files\CSC 439\Website\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\obj\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.dll
+C:\Users\HP\Desktop\All Files\CSC 439\Website\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\obj\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.pdb
+C:\Users\HP\Desktop\Nogor Howla Govt. Primary School\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\bin\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.deps.json
+C:\Users\HP\Desktop\Nogor Howla Govt. Primary School\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\bin\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.runtimeconfig.json
+C:\Users\HP\Desktop\Nogor Howla Govt. Primary School\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\bin\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.runtimeconfig.dev.json
+C:\Users\HP\Desktop\Nogor Howla Govt. Primary School\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\bin\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.dll
+C:\Users\HP\Desktop\Nogor Howla Govt. Primary School\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\bin\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.pdb
+C:\Users\HP\Desktop\Nogor Howla Govt. Primary School\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\obj\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.csprojResolveAssemblyReference.cache
+C:\Users\HP\Desktop\Nogor Howla Govt. Primary School\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\obj\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\Nogor Howla Govt. Primary School\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\obj\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\Nogor Howla Govt. Primary School\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\obj\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.AssemblyInfo.cs
+C:\Users\HP\Desktop\Nogor Howla Govt. Primary School\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\obj\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.dll
+C:\Users\HP\Desktop\Nogor Howla Govt. Primary School\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\obj\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.pdb
+F:\All Educational Files\CSC 439\C# Project\Nogor Howla Govt. Primary School\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\bin\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.deps.json
+F:\All Educational Files\CSC 439\C# Project\Nogor Howla Govt. Primary School\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\bin\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.runtimeconfig.json
+F:\All Educational Files\CSC 439\C# Project\Nogor Howla Govt. Primary School\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\bin\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.runtimeconfig.dev.json
+F:\All Educational Files\CSC 439\C# Project\Nogor Howla Govt. Primary School\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\bin\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.dll
+F:\All Educational Files\CSC 439\C# Project\Nogor Howla Govt. Primary School\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\bin\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.pdb
+F:\All Educational Files\CSC 439\C# Project\Nogor Howla Govt. Primary School\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\obj\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.csprojAssemblyReference.cache
+F:\All Educational Files\CSC 439\C# Project\Nogor Howla Govt. Primary School\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\obj\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.csproj.CoreCompileInputs.cache
+F:\All Educational Files\CSC 439\C# Project\Nogor Howla Govt. Primary School\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\obj\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.AssemblyInfoInputs.cache
+F:\All Educational Files\CSC 439\C# Project\Nogor Howla Govt. Primary School\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\obj\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.AssemblyInfo.cs
+F:\All Educational Files\CSC 439\C# Project\Nogor Howla Govt. Primary School\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\obj\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.dll
+F:\All Educational Files\CSC 439\C# Project\Nogor Howla Govt. Primary School\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\obj\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.pdb
+C:\Users\anis4\Desktop\Nogor Howla Govt. Primary School\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\bin\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.deps.json
+C:\Users\anis4\Desktop\Nogor Howla Govt. Primary School\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\bin\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.runtimeconfig.json
+C:\Users\anis4\Desktop\Nogor Howla Govt. Primary School\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\bin\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.runtimeconfig.dev.json
+C:\Users\anis4\Desktop\Nogor Howla Govt. Primary School\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\bin\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.dll
+C:\Users\anis4\Desktop\Nogor Howla Govt. Primary School\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\bin\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.pdb
+C:\Users\anis4\Desktop\Nogor Howla Govt. Primary School\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\obj\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.csprojAssemblyReference.cache
+C:\Users\anis4\Desktop\Nogor Howla Govt. Primary School\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\obj\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.csproj.CoreCompileInputs.cache
+C:\Users\anis4\Desktop\Nogor Howla Govt. Primary School\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\obj\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.AssemblyInfoInputs.cache
+C:\Users\anis4\Desktop\Nogor Howla Govt. Primary School\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\obj\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.AssemblyInfo.cs
+C:\Users\anis4\Desktop\Nogor Howla Govt. Primary School\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\obj\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.dll
+C:\Users\anis4\Desktop\Nogor Howla Govt. Primary School\NagarHawlaGovtPrimarySchool\NagarHawlaGovtPrimarySchool\obj\Debug\netcoreapp2.0\NagarHawlaGovtPrimarySchool.pdb

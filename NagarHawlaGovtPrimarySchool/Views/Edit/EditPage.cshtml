@@ -1,0 +1,59 @@
+﻿@model NagarHawlaGovtPrimarySchool.Models.ClassList
+@{
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+@section Aboutcss{
+    <link href="~/css/popup1.css" rel="stylesheet" />
+}
+@{
+    ViewData["Active"] = "";
+    ViewData["method"] = "Home";
+    ViewData["controller"] = "Manager";
+    ViewData["option"] = "হোম";
+}
+@section asideOption {
+    <li class="">
+        <a asp-controller="Manager" asp-action="Admins">
+            <i class="fa fa-dashboard"></i> <span>এডমিনদের তথ্য</span>
+        </a>
+    </li>
+    <li class="active">
+        <a asp-controller="Edit" asp-action="EditPage">
+            <i class="fa fa-dashboard"></i> <span>সম্পাদন করুন</span>
+        </a>
+    </li>
+}
+
+<div class="row container">    <p></p>  </div>
+<div class="row container" style="margin-top:200px;">
+    <div class="col col-md-3">
+        <a asp-controller="Edit" asp-action="Classs">
+            <div class="custom_EditButton">
+                শ্রেণি
+            </div>
+        </a>
+    </div>
+    <div class="col col-md-3">
+        <a asp-controller="Edit" asp-action="Sections">
+            <div class="custom_EditButton">
+                শাখা
+            </div>
+        </a>
+    </div>
+
+    <div class="col col-md-3">
+        <a asp-controller="Edit" asp-action="Subjects">
+            <div class="custom_EditButton">
+                বিষয়
+            </div>
+        </a>
+    </div>
+    <div class="col col-md-3">
+        <a asp-controller="Edit" asp-action="ExamTypes">
+            <div class="custom_EditButton">
+                পরিক্ষার ধরণ
+            </div>
+        </a>
+    </div>    
+</div>
+

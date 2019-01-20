@@ -1,0 +1,43 @@
+﻿@model NagarHawlaGovtPrimarySchool.Models.StudentList
+
+@{
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+@{
+    ViewData["Active"] = "active";
+    ViewData["method"] = "Result";
+    ViewData["controller"] = "Result";
+    ViewData["option"] = "ফলাফল";
+}
+@section asideOption {
+    <li class="">
+        <a asp-controller="AdminStudentResultView" asp-action="Classes">
+            <i class="fa fa-dashboard"></i> <span>ফলাফল দেখুন</span>
+        </a>
+    </li>
+}
+
+<div class="container">
+    <table class="custom_admin_student_information_table">
+        <tr>
+            <th>স্টুডেন্ট আইডি </th>
+            <th>নাম বাংলা</th>
+            <th>নাম ইংরেজীত</th>
+            <th>ফলাফল সংরক্ষণ করুন</th>
+        </tr>
+        @foreach (var data in Model.StudentAll)
+        {
+            <tr title="Click Here to See Details">
+                <td class="showDetails pointer">@data.StudentId</td>
+                <td class="showDetails pointer">@data.StudentNameBangla</td>
+                <td class="showDetails pointer">@data.StudentNameEnglish</td>
+                <td class="showDetails pointer">
+                    <a asp-controller="Result" asp-action="StudentResultIndividualUpdate"
+                       asp-route-StudentId="@data.StudentId" asp-route-ClassName="@data.ClassName" asp-route-exam_type="@ViewData["exam_type"]" asp-route-sectionName="@ViewData["sectionName"]">আপডেট</a>
+                </td>
+            </tr>
+        }
+
+    </table>
+
+</div>

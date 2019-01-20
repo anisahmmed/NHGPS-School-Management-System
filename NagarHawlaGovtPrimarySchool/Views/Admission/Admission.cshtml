@@ -1,0 +1,265 @@
+﻿@model NagarHawlaGovtPrimarySchool.Models.ClassList
+@{
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+@{
+    ViewData["Active"] = "active";
+    ViewData["controller"] = "Admission";
+    ViewData["method"] = "Admission";
+    ViewData["option"] = "ভর্তি";
+}
+@section asideOption {
+<li class="">
+    <a asp-controller="Admission" asp-action="SearchStudentInformation">
+        <i class="fa fa-dashboard"></i> <span>শিক্ষার্থীদের তথ্য</span>
+    </a>
+</li>
+}
+<div class="custom_admin_container">
+    <div class="row">
+        <div class="col-md-4 col-sm-4" style="text-align:center;">
+            “জ্ঞানের জন্য এসো”
+        </div>
+        <div class="col-md-4 col-sm-4" style="text-align:center;">
+            বিসমিল্লাহির রাহমানির রাহিম
+        </div>
+        <div class="col-md-4 col-sm-4" style="text-align:center;">
+            "সেবার জন্য বেরিয়ে যাও"
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div style="width: 130px; margin: 0 auto;">
+                <img class="img-responsive" src="../images/logo.jpg">
+            </div>
+        </div>
+        <div class="col-md-4" style="text-align:center;">
+            <h3>নগর হাওলা সরকারি প্রাথমিক বিদ্যালয় </h3>
+            <p>(শিশু শ্রেণি থেকে ৮ম শ্রেণি পর্যন্ত) </p>
+            <p>গ্রাম: নগরহাওলা, ডাকঘর: গাজীপুর, শ্রীপুর, গাজীপুর। </p>
+        </div>
+
+        <div class="col-md-4" style="text-align:center;">
+            <br>
+            <br>
+            <br>
+            <p>বিদ্যালয় কোড – ৩০৭০৪০৪০৬</p>
+            <p>EIIN-138161</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div style="width: 130px; margin: 0 auto;">
+                <p>"সি.সি ক্যামেরা নিয়ন্ত্রিত" </p>
+            </div>
+        </div>
+        <div class="col-md-4" style="text-align:center;">
+            <p>স্থাপিতঃ ১৯৬৮ খ্রিঃ  </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="custom_admin_header col-md-12">
+            <span class="custom_admin_header2 h3">ভর্তি আবেদন পত্র</span>
+        </div>
+    </div>
+    <form class="custom_admin_form form-inline" asp-controller="Admission" asp-action="Admission" method="post" role="form">
+        <div class="row">
+            <div class="custom_admin_header col-md-12">
+                <span class="custom_admin_header3">
+                    ফরম  নং
+                    <input type="text" class="form-control" name="FormNo" required>
+                </span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="name"> শিক্ষার্থী আইডি </label>
+                        <input type="text" class="form-control" name="StudentId" required>
+                    </div>
+                </div>
+
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <div class="btn-group">
+                            <label style="float:left" for="email">যে শ্রেণিতে ভর্তি হতে ইচ্ছুক : &nbsp;</label>
+                            <span></span>
+                            <select id="custom_combobox_hieght" name="ClassName">
+                                @foreach (var data in Model.ClassAll) 
+                                 {
+                                     <option class="btn btn-primary" value="@data.class_name">@data.class_name</option>
+                                 }
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <div class="btn-group">
+                            <label style="float:left" for="email">শাখা  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                            <span></span>
+                            <select id="custom_combobox_hieght" name="Section">
+
+
+                                <option class="btn btn-primary" value="ক">ক</option>
+                                <option class="btn btn-primary" value="খ">খ </option>
+                                </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="name"> ছাত্র/ ছাত্রীর নাম ( বাংলায় ) </label>
+                        <input type="text" class="form-control" name="StudentNameBangla" required>
+                        <label class="custom_admin_form_paddingLeft" for="name">ইংরেজীতে ( বড় হাতের  ) </label>
+                        <input type="text" class="form-control" name="StudentNameEnglish" required>
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="name"> পিতার নাম </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" class="form-control" name="FatherName" required>
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="nid">পিতার এনআইডি </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" class="form-control" name="FatherNID" required>
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="fatherMobile"> পিতার মোবাইল নাম্বার  </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" class="form-control" name="FatherMobile" required>
+                        <label class="custom_admin_form_paddingLeft" for="fatherDOB"> পিতার জন্ম তারিখ </label>
+                        <input type="date" class="form-control" name="FatherDOB" required>
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="fatherMobile"> দাদার নাম  </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" class="form-control" name="PaternalGrandFatherName" required>
+                        <label class="custom_admin_form_paddingLeft" for="fatherDOB"> দাদীর নাম</label>
+                        <input type="text" class="form-control" name="PaternalGrandMotherName" required>
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="name"> মাতার নাম </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" class="form-control" name="MotherName" required>
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="nid"> মাতার এনআইডি</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" class="form-control" name="MotherNID" required>
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="motherMobile"> মাতার মোবাইল নাম্বার </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" class="form-control" name="MotherMobile" required>
+                        <label class="custom_admin_form_paddingLeft" for="MotherDOB"> মাতার জন্ম তারিখ</label>
+                        <input type="date" class="form-control" name="MotherDOB" required>
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="grandFatherNameMom">নানার নাম </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" class="form-control" name="MaternalGrandFatherName" required>
+                        <label class="custom_admin_form_paddingLeft" for="grandMotherName">নানীর নাম</label>
+                        <input type="text" class="form-control" name="MaternalGrandMotherName" required>
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="studentDOB"> ছাত্র/ছাত্রীর জন্ম তারিখ</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="date" class="form-control" name="StudentDOB" required>
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="studentBirthCertificate">ছাত্র/ছাত্রীর জন্ম নিবন্ধন নম্বর</label>
+                        <input type="text" class="form-control" name="StudentBirthCertificateNo" required>
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="permanentAddress"> স্থায়ী ঠিকানা </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label for="permanentAddressVillage"> গ্রাম  </label>
+                        <input type="text" class="form-control" name="PermanentVillage" required>
+                        <label for="permanentAddressPost">পোস্ট </label>
+                        <input type="text" class="form-control" name="PermanentPost" required>
+                        <label for="permanentAddressPostCode">পোস্ট কোড</label>
+                        <input type="text" class="form-control" name="PermanentPostCode" required>
+                        <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        <label style="padding-top: 10px;" for="permanentAddressSubDistrict"> উপজেলা  </label>
+                        <input type="text" class="form-control" name="PermanentSubDistrict" required>
+                        <label class="custom_admin_form_paddingLeft custom_admin_form_paddingBottom" for="permanentAddressDistrict">জেলা </label>
+                        <input type="text" class="form-control" name="PermanentDistrict" required>
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="presentAddress"> বর্তমান ঠিকানা </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label for="presentAddressVillage"> গ্রাম  </label>
+                        <input type="text" class="form-control" name="PresentVillage" required>
+                        <label for="presentAddressPost">পোস্ট </label>
+                        <input type="text" class="form-control" name="PresentPost" required>
+                        <label for="presentAddressPostCode">পোস্ট কোড</label>
+                        <input type="text" class="form-control" id="PresentPostCode" name="PresentPostCode">
+                        <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label style="padding-top: 10px;" for="presentAddressSubDistrict"> উপজেলা  </label>
+                        <input type="text" class="form-control" name="PresentSubDistrict" required>
+                        <label class="custom_admin_form_paddingLeft" for="presentAddressDistrict">জেলা </label>
+                        <input type="text" class="form-control" name="PresentDistrict" required>
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="name">* ভাড়াটিয়াদের জন্যঃ-  </label><br />
+                        <label for="name">বাড়ির মালিকের নাম  </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" class="form-control" name="HomeOwnerName">
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="name">মালিকের মোবাইল নম্বর  </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" class="form-control" name="HomeOwnerMobile">
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="image"> ছাত্র/ছাত্রীর ছবি </label>
+                        <input type="file" name="studentImage" accept="image/*">
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="image">জন্ম নিবন্ধন </label>
+                        <input type="file" name="studentsBirthCertificate" accept="image/*">
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="image">বাবার জাতীয় পরিচয় পত্র  </label>
+                        <input type="file" name="fathersNIDCopy" accept="image/*">
+                    </div>
+                </div>
+                <div class="row custom_admin_form_paddingBottom">
+                    <div class="col-md-12">
+                        <label for="image">মায়ের  জাতীয় পরিচয় পত্র</label>
+                        <input type="file" name="mothersNIDCopy" accept="image/*">
+                    </div>
+                </div>
+                <div class="row container">
+                    <input type="submit" class="custom_form_button btn btn-default " value="Submit">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

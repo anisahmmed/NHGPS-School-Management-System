@@ -1,0 +1,65 @@
+/**
+ * @package Sj K2 Slick Slider
+ * @version 3.0.0
+ * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ * @copyright (c) 2013 YouTech Company. All Rights Reserved.
+ * @author YouTech Company http://www.smartaddons.com
+ */
+
+.sj-k2slickslider .side-info .item-title {
+	font-weight: bold;
+	font-size: 28px;
+	line-height: 28px;
+	color: #FFFFFF;
+}
+
+.sj-k2slickslider .side-info .item-title a {
+	font-weight: bold;
+	font-size: 28px;
+	line-height: 28px;
+	color: #FFFFFF;
+}
+
+.sj-k2slickslider .side-info .item-price {
+	font-weight: bold;
+	font-size: 20px;
+	font-family: Georgia;
+	padding: 8px 20px 0;
+}
+
+.sj-k2slickslider .side-info .item-price .sale-price {
+	color: #F30000;
+}
+
+.sj-k2slickslider .side-info .item-price .sale-price-before {
+	color: #F30000;
+	text-decoration: line-through;
+}
+
+.sj-k2slickslider .side-info .item-description {
+	color: #FFFFFF;
+}
+
+.sj-k2slickslider .side-info .item-readmore {
+	text-align: left;
+}
+
+.sj-k2slickslider .side-info .item-readmore a {
+	color: #FFFFFF;
+}
+
+.sj-k2slickslider .pag-list.type-num .pag-item {
+	text-align: center;
+	font-size: 13px;
+	font-weight: bold;
+	line-height: 18px;
+	color: #AAAAAA;
+}
+
+.sj-k2slickslider .pag-list.type-num .pag-item.sel {
+	color: #FFFFFF;
+}
+
+.sj-k2slickslider .pag-list.type-dot .pag-item {
+	text-indent: -999px;
+}

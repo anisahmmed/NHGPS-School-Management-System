@@ -1,0 +1,79 @@
+﻿@{
+    ViewData["Title"] = "যোগাযোগ";
+    ViewData["contactActive"] = "active";
+}
+@section AboutCss {
+
+    <link rel="stylesheet" type="text/css" href="~/css/contact5.css" />
+}
+
+<div class="Contact Content">
+    <section style="padding: 5.3125rem 0!important;">
+        <div class="Container panelsec3">
+            <div class="Contact-main">
+                <div class="Contact-panel">
+                    <div class="Contact-panel-image">
+                        <img src="~/images/11.png" />
+                    </div>
+                    <div class="Contact-panel-content">
+                        <h3 class="Heading3">ফেইসবুক পেইজ</h3>
+                        <button class="btn btn--outline-red-500 " onclick="window.open('http://www.facebook.com/nogorhawlagovtprimaryschool/')">এখানে ক্লিক করুন</button>
+                    </div>
+                </div>
+                <div class="Contact-panel">
+                    <div class="Contact-panel-image">
+                        <img src="~/images/33.png" />
+                    </div>
+                    <div class="Contact-panel-content">
+                        <h3 class="Heading3">ইমেইল</h3>
+                        <button class="btn btn--outline-red-500 " onclick="window.open('http://www.gmail.com/nagarhawlagps.bd@gmail.com/')">এখানে ক্লিক করুন</button>
+                    </div>
+                </div>
+                <div class="Contact-panel">
+                    <div class="Contact-panel-image">
+                        <img src="~/images/22.png" />
+                    </div>
+                    <div class="Contact-panel-content">
+                        <h3 class="Heading3">ফোন নাম্বার</h3>
+                        <button class="call_modal btn btn--outline-red-500">এখানে ক্লিক করুন</button>
+                        <div class="modal">
+                            <div class="modal_close close"></div>
+                            <div class="modal_main">
+                                <img src="~/images/i783wQYjrKQ.png" class="close" style="margin-top:13px;left:96%;position:fixed;">
+                                <p style="text-align:center;color:black;padding-top:104px;font-size:19px;">গ্রামঃ নগর হাওলা<br /> ডাকঘরঃ গাজীপুর<br /> উপজেলাঃ শ্রীপুর<br /> মোবাইলঃ ০১৭১৩-৫৩০৭৫০,<br />০১৯২৬৭০২০২৬<br />ইমেইলঃ nagarhawlagps@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="Container Container--maxWidth Contact-footer-container">
+            <div>
+                <div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3637.0293698315363!2d90.38439471499137!3d24.275704684333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3756717035563eb9%3A0x50e674f22dde999a!2sNagar+Hawla+Government+Primary+School!5e0!3m2!1sen!2sbd!4v1521826211304" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+@section Scripts {
+    <script type="text/javascript" src="~/js/jquery-1.10.2.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".call_modal").click(function () {
+                $(".modal").fadeIn();
+                $(".modal_main").show();
+            });
+        });
+        $(document).ready(function () {
+            $(".close").click(function () {
+                $(".modal").fadeOut();
+                $(".modal_main").fadeOut();
+            });
+        });
+    </script>
+}
+

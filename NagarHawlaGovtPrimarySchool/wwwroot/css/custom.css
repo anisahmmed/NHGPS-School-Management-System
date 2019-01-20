@@ -1,0 +1,113 @@
+.custom_center {
+    color: white;
+    text-align: center;
+}
+.custom_title{
+  text-align: center;
+  font-weight:bold;
+  margin-right: 120px;
+  color:green;
+}
+
+.custom_eiin{
+	text-align:center;
+	color: green;
+}
+.custom_admin_container{
+	background-color: white;
+}
+.custom_admin_header{
+	text-align: center;
+}
+.custom_admin_header2{
+	padding: 5px;
+	background-color: black;
+	color: white;
+	border-radius: 5px;
+}
+.custom_admin_header3{
+	float: right;
+	margin: 10px 55px;
+}
+.custom_admin_form{
+	padding-left: 10px;
+}
+.custom_admin_form_paddingTop{
+	padding-bottom: 10px;
+}
+.custom_admin_form_paddingBottom{
+	padding-bottom: 5px;
+}
+.custom_admin_form_paddingLeft{
+	padding-left: 80px;
+}
+
+.custom_form_button{
+	border-radius: 25px;
+	width: 160px;
+	padding: 10px;
+	margin: 25px;
+	
+}
+.custom_about_tittle {
+    color: forestgreen;
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 16px;
+}
+.custom_about_line {
+    letter-spacing: 1px;
+    line-height: 1.9;
+}
+.custom_admin_student_information_table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 96%;
+}
+
+.custom_admin_student_information td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.custom_admin_student_information_table tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+#custom_form_noBorder{
+	border: 1px solid white;
+	background-color: white;
+}
+
+.custom_resultForm {
+    width: 250px;
+    font-size: 15px;
+}
+.custom_noBoarder {
+    border: none;
+    background-color: #ecf0f5;
+}
+
+.custom_EditButton {
+    padding: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 130%;
+    border: 1px solid #3366cc;
+    border-radius: 10px;
+    text-align: center;
+    -moz-box-shadow: : 6px 6px 5px #999;
+    -webkit-box-shadow: : 6px 6px 5px #999;
+    box-shadow: : 6px 6px 5px #999;
+}
+.custom_EditButton:hover {
+        color: #ffff00;
+        background: #000;
+        border: 1px solid #fff;
+ }
+ 
+#custom_combobox_hieght{
+	height: 40px;
+	width: 200px;
+}

@@ -1,0 +1,83 @@
+﻿@model NagarHawlaGovtPrimarySchool.Models.StudentList
+
+@{
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+@{
+    ViewData["Active"] = "";
+    ViewData["controller"] = "Result";
+    ViewData["method"] = "Result";
+    ViewData["option"] = "ফলাফল";
+}
+@section asideOption {
+    <li class="active">
+        <a asp-controller="AdminStudentResultView" asp-action="Classes">
+            <i class="fa fa-dashboard"></i> <span>ফলাফল দেখুন </span>
+        </a>
+    </li>
+}
+
+<div class="container">
+    <table class="custom_admin_student_information_table">
+        <tr>
+            <th>স্টুডেন্ট আইডি </th>
+            <th>নাম বাংলা</th>
+            <th>নাম ইংরেজীত</th>
+            <th>মোবাইল নাম্বার</th>
+            <th>অন্যান্য</th>
+        </tr>
+        @foreach (var data in Model.StudentAll)
+        {
+            <tr title="Click Here to See Details">
+                <td class="showDetails pointer">@data.StudentId</td>
+                <td class="showDetails pointer">@data.StudentNameBangla</td>
+                <td class="showDetails pointer">@data.StudentNameEnglish</td>
+                <td class="showDetails pointer">@data.FatherMobile</td>
+                <td class="showDetails pointer">
+                    <a asp-controller="AdminStudentResultView" asp-action="StudentResultIndividual"
+                       asp-route-studentId="@data.StudentId" asp-route-className="@data.ClassName" asp-route-section="@data.Section">বিস্তারিত</a>
+
+
+                </td>
+            </tr>
+        }
+
+    </table>
+
+</div>
+
+<div id="printableArea" style="opacity:0;display:none;visibility:hidden;">
+    <div class="container">
+        <table class="custom_admin_student_information_table">
+            <tr>
+                <th>স্টুডেন্ট আইডি </th>
+                <th>নাম বাংলা</th>
+                <th>নাম ইংরেজীত</th>
+                <th>মোবাইল নাম্বার</th>
+                            </tr>
+            @foreach (var data in Model.StudentAll)
+            {
+                <tr title="Click Here to See Details">
+                    <td class="showDetails pointer">@data.StudentId</td>
+                    <td class="showDetails pointer">@data.StudentNameBangla</td>
+                    <td class="showDetails pointer">@data.StudentNameEnglish</td>
+                    <td class="showDetails pointer">@data.FatherMobile</td>
+                    
+                </tr>
+            }
+
+        </table>
+
+    </div>
+</div>
+</br><center><button style="color:green;" onclick="printDiv('printableArea')"><b>Print!</b></button></center>
+		  </br>
+<script type="text/javascript">
+function printDiv(divName) {
+    var printContents = document.getElementById(divName).innerHTML;
+    var originalContents = document.body.innerHTML;
+    document.body.innerHTML = printContents;
+    window.print();
+    document.body.innerHTML = originalContents;
+    }
+</script>

@@ -1,0 +1,838 @@
+﻿@{
+    ViewData["Title"] = "প্রধান পাতা";
+    ViewData["mainPageActive"] = "active";
+}
+
+<section id="yt_spotlight1" class="block">
+    <div class="container">
+        <div class="row">
+            <div id="slideshow" class="col-sm-12">
+                <div id="sj_k2slickslider346" class="sj-k2slickslider  slide slickslider-right" data-interval="5000" data-pause="hover">
+                    <!-- Carousel items -->
+                    <div class="slickslider-items bg-style1">
+                        <div class="slickslider-item item clearfix active ">
+                            <div class="images-slideshow">
+                                <img alt="" src="~/images/1.jpg" />
+                            </div>
+                            <div class="item-content">
+                                <div class="item-content-inner">
+                                    <h3 class="">
+                                        <span class="line"></span>
+                                    </h3>
+                                    <div class="item-description">
+                                    </div>
+                                    <div class="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slickslider-item item clearfix  ">
+                            <div class="images-slideshow">
+                                <img alt="Aenean vehicula vehicula aliquam" src="~/images/i3.jpg" />
+                            </div>
+                            <div class="item-content">
+                                <div class="item-content-inner">
+                                    <h3 class="">
+                                        <span class="line"></span>
+                                    </h3>
+                                    <div class="item-description">
+                                    </div>
+                                    <div class="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slickslider-item item clearfix  ">
+                            <div class="images-slideshow">
+                                <img alt="Aliquam lobortis cursus erat" src="~/images/3.jpg" />
+                            </div>
+                            <div class="item-content">
+                                <div class="item-content-inner">
+                                    <h3 class="">
+                                        <span class="line"></span>
+                                    </h3>
+                                    <div class="item-description">
+                                    </div>
+                                    <div class="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slickslider-item item clearfix  ">
+
+                            <div class="images-slideshow">
+                                <img alt="Curabitur luctus tortor non quam" src="~/images/7.jpg" />
+                            </div>
+                            <div class="item-content">
+                                <div class="item-content-inner">
+                                    <h3 class="">
+                                        <span class="line"></span>
+                                    </h3>
+                                    <div class="item-description">
+                                    </div>
+                                    <div class="">
+                                    </div>
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-pagination conner-tl bg-style1">
+                        <a class="left" href="#sj_k2slickslider346" data-jslide="prev">
+                            Prev			<span class="over-row"></span>
+                        </a>
+                        <a class="right" href="#sj_k2slickslider346" data-jslide="next">
+                            Next			<span class="over-row"></span>
+                        </a>
+                    </div>
+                    <div class="pag-item">
+                        <a class=" sel" href="#sj_k2slickslider346" data-jslide="0">1</a>
+                        <a class=" " href="#sj_k2slickslider346" data-jslide="1">2</a>
+                        <a class=" " href="#sj_k2slickslider346" data-jslide="2">3</a>
+                        <a class=" " href="#sj_k2slickslider346" data-jslide="3">4</a>
+                    </div>
+                </div>
+
+                <script>
+                    jQuery(document).ready(function ($) {
+
+                        $('#sj_k2slickslider346').each(function () {
+                            var $this = $(this), options = options = !$this.data('modal') && $.extend({}, $this.data());
+                            $this.jcarousel(options);
+                            $this.bind('jslide', function (e) {
+                                var index = $(this).find(e.relatedTarget).index();
+                                // process for nav
+                                $('[data-jslide]').each(function () {
+                                    var $nav = $(this), $navData = $nav.data(), href, $target = $($nav.attr('data-target') || (href = $nav.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, ''));
+                                    if (!$target.is($this)) return;
+                                    if (typeof $navData.jslide == 'number' && $navData.jslide == index) {
+                                        $nav.addClass('sel');
+                                    } else {
+                                        $nav.removeClass('sel');
+                                    }
+                                });
+                            });
+                            $this.touchSwipeLeft(function () {
+                                $this.jcarousel('next');
+                            }
+                            );
+                            $this.touchSwipeRight(function () {
+                                $this.jcarousel('prev');
+                            }
+                            );
+                        });
+                        return;
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="yt_spotlight2" class="block">
+    <div class="container">
+        <div class="row">
+            <div id="top3" class="col-sm-12">
+                <div class="module  categories-ii ">
+                    <div class="modcontent clearfix">
+                        <div id="category_9394562511518943368" class="sj_category theme4">
+                            <ul class="line items-row1">
+                                <li class="icon-image " style="width: -20px;">
+                                    <img src="~/images/selfrelaint.jpg" alt="cache/resized/selfrelaint.jpg" />
+                                    <img style="width: -20px; height: 170px;" src="~/images/99_42ee058ac17c435b6ee028aaa5eac906.jpeg" alt="image" />
+                                    <div class="over-image"></div>
+                                </li>
+                                <li class="content">
+                                    <h3 class="tilte">
+                                        <a href="index.php/k2-listing/itemlist/category/99-accounting">আত্ম-উন্নয়ন</a>
+                                    </h3>
+                                    <p class="des">
+                                        আমরা সবাই সুখী হওয়ার লক্ষ্য নিয়ে বসবাস করি; আমাদের জীবনে সবই ভিন্ন এবং এখনো একই ।
+                                        -এ্যানি ফ্রাঙ্ক
+                                    </p>
+                                </li>
+
+                                <li class="icon-image " style="width: -20px;">
+                                    <a href="index.php/k2-listing/itemlist/category/100-finance">
+                                        <img style="width: -20px; height: 170px;" src="~/images/100_42ee058ac17c435b6ee028aaa5eac906.jpeg" alt="image" />
+                                    </a>
+                                    <div class="over-image"></div>
+                                </li>
+                                <li class="content">
+                                    <h3 class="tilte">
+                                        <a href="index.php/k2-listing/itemlist/category/100-finance">সহ-শিক্ষা কার্যক্রম</a>
+                                    </h3>
+                                    <p class="des">আজকের সহশিক্ষাই তো আগামীর শিক্ষা</p>
+                                </li>
+
+                                <li class="icon-image " style="width: -20px;">
+                                    <a href="index.php/k2-listing/itemlist/category/107-management">
+                                        <img style="width: -20px; height: 170px;" src="~/images/107_42ee058ac17c435b6ee028aaa5eac906.jpeg" alt="image" />
+                                    </a>
+                                    <div class="over-image"></div>
+                                </li>
+                                <li class="content">
+                                    <h3 class="tilte">
+                                        <a href="index.php/k2-listing/itemlist/category/107-management">
+                                            ব্যবস্থাপনা
+                                        </a>
+                                    </h3>
+                                    <p class="des"> </p>
+                                </li>
+
+                                <li class="icon-image " style="width: -20px;">
+                                    <a href="index.php/k2-listing/itemlist/category/108-medical">
+                                        <img style="width: -20px; height: 170px;" src="~/images/108_42ee058ac17c435b6ee028aaa5eac906.jpeg" alt="image" />
+                                    </a>
+                                    <div class="over-image"></div>
+
+                                </li>
+                                <li class="content">
+                                    <h3 class="tilte">
+                                        <a href="index.php/k2-listing/itemlist/category/108-medical">প্ৰাথমিক চিকিৎসা</a>
+                                    </h3>
+                                    <p class="des"></p>
+                                </li>
+
+                                <li class="icon-image " style="width: -20px;">
+                                    <a href="index.php/k2-listing/itemlist/category/109-art-design">
+                                        <img style="width: -20px; height: 170px;" src="~/images/109_42ee058ac17c435b6ee028aaa5eac906.jpeg" alt="image" />
+                                    </a>
+                                    <div class="over-image"></div>
+                                </li>
+                                <li class="content">
+                                    <h3 class="tilte">
+                                        <a href="index.php/k2-listing/itemlist/category/109-art-design">চারুকলা</a>
+                                    </h3>
+                                    <p class="des">শিক্ষার্থীদের চারুকলা </p>
+                                </li>
+
+                                <li class="icon-image " style="width: -20px;">
+                                    <a href="index.php/k2/itemlist/category/126-programming">
+                                        <img style="width: -20px; height: 170px;" src="~/images/126_42ee058ac17c435b6ee028aaa5eac906.jpeg" alt="image" />
+                                    </a>
+                                    <div class="over-image"></div>
+                                </li>
+                                <li class="content">
+                                    <h3 class="tilte">
+                                        <a href="index.php/k2/itemlist/category/126-programming">তথ্য ও যোগাযোগ প্রযুক্তি</a>
+                                    </h3>
+                                    <p class="des">
+                                        বর্তমান পৃথিবী তথ্য ও যোগাযোগ প্রযুক্তির পৃথিবী
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div data-vc-full-width="true" data-vc-full-width-init="true" class="vc_row wpb_row vc_row-fluid vc_custom_1439978563795 vc_row-has-fill" style="position: relative;  box-sizing: border-box;">
+    <div class="wpb_column vc_column_container vc_col-sm-12">
+        <div class="vc_column-inner ">
+            <div class="wpb_wrapper">
+                <div id="2eUZIFBXVW" class="k2t-heading align-center has-border no-subtitle h2 two_dots">
+                    <div class="k2t-heading-inner">
+                        <div class="text">
+                            <h2 class="h" style="color: #ffffff">
+                                <span>নগর হাওলা সরকারি প্রাথমিক বিদ্যালয়ে স্বাগতম</span>
+                            </h2><div class="has-boder-style"><span></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vc_empty_space" style="height: 10px"><span class="vc_empty_space_inner"></span></div>
+                <div class="wpb_text_column wpb_content_element  vc_custom_1440380914387">
+                    <div class="wpb_wrapper">
+                        <p style="text-align: center; color: #fff; font-size: 18px;">"জ্ঞানের জন্য এসো, সেবার জন্য বেরিয়ে যাও" </p>
+                    </div>
+                </div>
+                <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                    <div class="wpb_column vc_column_container vc_col-sm-6 vc_col-lg-3 vc_col-md-3">
+                        <div class="vc_column-inner vc_custom_1439978684801">
+                            <div class="wpb_wrapper">
+                                <div id="icb-5a8d7356b80de" class="k2t-iconbox layout-1 k2t-element-hover" style="">
+                                    <div class="iconbox-icon" style=""><i style="" class="zmdi zmdi-graduation-cap"></i></div><div class="iconbox-text">
+                                        <div class="title"><h3 style="text-transform: uppercase;" class="h">প্ৰাক্তন শিক্ষার্থী</h3></div><div class="desc">
+                                            ৯০%
+                                        </div>
+                                    </div>
+                                </div>
+                                <style></style>
+                            </div>
+                        </div>
+                    </div><div class="wpb_column vc_column_container vc_col-sm-6 vc_col-lg-3 vc_col-md-3">
+                        <div class="vc_column-inner vc_custom_1439978654903">
+                            <div class="wpb_wrapper">
+                                <div id="icb-5a8d7356b85c8" class="k2t-iconbox layout-1 k2t-element-hover" style="">
+                                    <div class="iconbox-icon" style=""><i style="" class="zmdi zmdi-accounts"></i></div><div class="iconbox-text">
+                                        <div class="title"><h3 style="text-transform: uppercase;" class="h">শিক্ষক / শিক্ষিকা</h3></div><div class="desc">
+                                            ১২+
+                                        </div>
+                                    </div>
+                                </div>
+                                <style></style>
+                            </div>
+                        </div>
+                    </div><div class="wpb_column vc_column_container vc_col-sm-6 vc_col-lg-3 vc_col-md-3">
+                        <div class="vc_column-inner vc_custom_1439978707578">
+                            <div class="wpb_wrapper">
+                                <div id="icb-5a8d7356b8a3f" class="k2t-iconbox layout-1 k2t-element-hover" style="">
+                                    <div class="iconbox-icon" style=""><i style="" class="zmdi zmdi-city"></i></div><div class="iconbox-text">
+                                        <div class="title"><h3 style="text-transform: uppercase;" class="h">শ্রেণীকক্ষ</h3></div><div class="desc">
+                                            ১০+
+                                        </div>
+                                    </div>
+                                </div>
+                                <style></style>
+                            </div>
+                        </div>
+                    </div><div class="wpb_column vc_column_container vc_col-sm-6 vc_col-lg-3 vc_col-md-3">
+                        <div class="vc_column-inner vc_custom_1439978730560">
+                            <div class="wpb_wrapper">
+                                <div id="icb-5a8d7356b8e83" class="k2t-iconbox layout-1 k2t-element-hover" style="">
+                                    <div class="iconbox-icon" style=""><i style="" class="zmdi zmdi-male-female"></i></div><div class="iconbox-text">
+                                        <div class="title"><h3 style="text-transform: uppercase;" class="h">শিক্ষার্থী</h3></div><div class="desc">
+                                            ১০০০+
+                                        </div>
+                                    </div>
+                                </div>
+                                <style></style>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section id="yt_spotlight4" class="block">
+    <div class="container">
+        <div class="row">
+            <div id="top6" class="col-sm-12">
+                <div class="module  extra-upcoming-slider ">
+                    <h3 class="modtitle"> আসন্ন ঘটনাবলী </h3>
+                    <div class="modcontent clearfix">
+                        <div id="sjextraslider_13656204371518943368" class="sj-extraslider slide  extra-resp01-3 extra-resp02-3 extra-resp03-1 extra-resp04-1" data-interval="0" data-pause="hover">
+                            <!--<![endif]-->
+                            <div class="extraslider-inner">
+                                <div class="item active">
+                                    <div class="line">
+                                        <div class="item-wrap style2">
+                                            <div class="item-wrap-inner">
+                                                <div class="item-image">
+                                                    <img src="~/images/Entertainment.jpg" alt="cache/resized/Entertainment.jpg" />								<div class="time-image">
+                                                        <!-- Date created -->
+                                                        <div class="item-created">
+                                                            <span>১৪</span>
+                                                            <span>এপ্রিল</span>
+                                                            <span>২০১৮</span>
+                                                        </div>
+                                                        <div class="event-time">
+                                                            <span class="start-time">
+                                                                সকাল ১০ টা
+                                                            </span>
+                                                            <span class="end-time">
+                                                                বিকাল ৫ টা
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="over-image"></div>
+                                                </div>
+                                                <div class="item-info">
+                                                    <div class="item-title">
+                                                        <a href="index.php/k2-listing/item/280-zatena-mipan-facen-timas-chumas" title="পহেলা বৈশাখ পালন ">
+                                                            পহেলা বৈশাখ পালন
+                                                        </a>
+                                                    </div>
+                                                    <div class="school">
+                                                        <a href="#">নগর হাওলা সরকারি প্রাথমিক বিদ্যালয়</a>
+                                                        <p> পহেলা বৈশাখ পালন </p>
+                                                    </div>
+                                                    <div class="item-content">
+                                                        <div class="item-description">
+                                                            পহেলা বৈশাখে আপনাদের আমন্ত্রন
+                                                        </div>
+                                                        <div class="item-readmore">
+                                                            <a href="index.php/k2-listing/item/280-zatena-mipan-facen-timas-chumas" title="">
+                                                                <i class="fa fa-long-arrow-right"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="clr1"></div>
+                                        <div class="item-wrap style2">
+                                            <div class="item-wrap-inner">
+                                                <div class="item-image">
+                                                    <img src="~/images/pohelamay.jpg" alt="cache/resized/pohelamay.jpg" />								<div class="time-image">
+                                                        <!-- Date created -->
+                                                        <div class="item-created">
+                                                            <span>১</span>
+                                                            <span>মে</span>
+                                                            <span>২০১৮</span>
+                                                        </div>
+                                                        <div class="event-time">
+                                                            <span class="start-time">
+                                                                সকাল ১০ টা
+                                                            </span>
+                                                            <span class="end-time">
+                                                                দুপুর ১ টা
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="over-image"></div>
+
+                                                </div>
+                                                <div class="item-info">
+                                                    <div class="item-title">
+                                                        <a href="index.php/k2-listing/item/279-gatana-mipan-chausa-take-liten" title="পহেলা মে পালন ">
+                                                            পহেলা মে পালন
+                                                        </a>
+                                                    </div>
+                                                    <div class="school">
+                                                        <a href="#">নগর হাওলা সরকারি প্রাথমিক বিদ্যালয়</a>
+                                                        <p>পহেলা মে আপনাদের আমন্ত্রন </p>
+                                                    </div>
+                                                    <div class="item-content">
+                                                        <div class="item-description">
+                                                            পহেলা মে পালন
+                                                        </div>
+                                                        <div class="item-readmore">
+                                                            <a href="index.php/k2-listing/item/279-gatana-mipan-chausa-take-liten" title="">
+                                                                <i class="fa fa-long-arrow-right"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="clr1 clr2"></div>
+                                        <div class="item-wrap style2">
+                                            <div class="item-wrap-inner">
+                                                <div class="item-image">
+                                                    <img src="~/images/shukdibosh.jpg" alt="cache/resized/shukdibosh.jpg" />								<div class="time-image">
+                                                        <!-- Date created -->
+                                                        <div class="item-created">
+                                                            <span>১৫</span>
+                                                            <span>আগস্ট </span>
+                                                            <span>২০১৮</span>
+                                                        </div>
+                                                        <div class="event-time">
+                                                            <span class="start-time">
+                                                                দুপুর ২ টা
+                                                            </span>
+                                                            <span class="end-time">
+                                                                বিকাল ৫ টা
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="over-image"></div>
+                                                </div>
+                                                <div class="item-info">
+                                                    <div class="item-title">
+                                                        <a href="index.php/k2-listing/item/278-pasen-takem-mitena-chuka-miren" title="শোক দিবস পালন">
+                                                            শোক দিবস পালন
+                                                        </a>
+                                                    </div>
+                                                    <div class="school">
+                                                        <a href="#">নগর হাওলা সরকারি প্রাথমিক বিদ্যালয়</a>
+                                                        <p>শোক দিবসে  আপনাদের আমন্ত্রন </p>
+                                                    </div>
+                                                    <div class="item-content">
+                                                        <div class="item-description">
+                                                            শোক দিবস পালন
+                                                        </div>
+                                                        <div class="item-readmore">
+                                                            <a href="index.php/k2-listing/item/278-pasen-takem-mitena-chuka-miren" title="">
+                                                                <i class="fa fa-long-arrow-right"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="clr1 clr3"></div>
+                                    </div><!--line-->
+                                </div><!--end item-->
+                                <div class="item ">
+                                    <div class="line">
+                                        <div class="item-wrap style2">
+                                            <div class="item-wrap-inner">
+                                                <div class="item-image">
+                                                    <img src="~/images/26march.jpg" alt="cache/resized/26march.jpg" />								<div class="time-image">
+                                                        <!-- Date created -->
+                                                        <div class="item-created">
+                                                            <span>২৬</span>
+                                                            <span>মার্চ</span>
+                                                            <span>২০১৮</span>
+                                                        </div>
+                                                        <div class="event-time">
+                                                            <span class="start-time">
+                                                                সকাল ১০ টা
+                                                            </span>
+                                                            <span class="end-time">
+                                                                দুপুর ১ টা
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="over-image"></div>
+                                                </div>
+                                                <div class="item-info">
+                                                    <div class="item-title">
+                                                        <a href="index.php/k2-listing/item/279-gatana-mipan-chausa-take-liten" title="পহেলা মে পালন ">
+                                                            ২৬ শে মার্চ পালন
+                                                        </a>
+                                                    </div>
+                                                    <div class="school">
+                                                        <a href="#">নগর হাওলা সরকারি প্রাথমিক বিদ্যালয়</a>
+                                                        <p>২৬ শে মার্চ এ আপনাদের আমন্ত্রন </p>
+                                                    </div>
+                                                    <div class="item-content">
+                                                        <div class="item-description">
+                                                            ২৬ শে মার্চ পালন
+                                                        </div>
+                                                        <div class="item-readmore">
+                                                            <a href="index.php/k2-listing/item/279-gatana-mipan-chausa-take-liten" title="">
+                                                                <i class="fa fa-long-arrow-right"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="clr1 clr3"></div>
+                                    </div><!--line-->
+                                </div><!--end item-->
+                            </div><!--end extraslider-inner -->
+                            <div class="extraslider-control  ">
+                                <ul class="nav-page">
+                                    <li class="page">
+                                        <a class="button-page sel" href="#sjextraslider_13656204371518943368" data-jslide="0"></a>
+                                    </li>
+                                    <li class="page">
+                                        <a class="button-page " href="#sjextraslider_13656204371518943368" data-jslide="1"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <script>
+                            jQuery(document).ready(function ($) {
+                                $('#sjextraslider_13656204371518943368').each(function () {
+                                    var $this = $(this), options = options = !$this.data('modal') && $.extend({}, $this.data());
+                                    $this.jcarousel(options);
+                                    $this.bind('jslide', function (e) {
+                                        var index = $(this).find(e.relatedTarget).index();
+                                        // process for nav
+                                        $('[data-jslide]').each(function () {
+                                            var $nav = $(this), $navData = $nav.data(), href, $target = $($nav.attr('data-target') || (href = $nav.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, ''));
+                                            if (!$target.is($this)) return;
+                                            if (typeof $navData.jslide == 'number' && $navData.jslide == index) {
+                                                $nav.addClass('sel');
+                                            } else {
+                                                $nav.removeClass('sel');
+                                            }
+                                        });
+                                    });
+                                    return;
+                                });
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="yt_spotlight5" class="block">
+    <div class="container">
+        <div class="row">
+            <div id="top7" class="col-lg-6 col-sm-12">
+                <div class="module  k2-mega-new-main ">
+                    <h3 class="modtitle">সাম্প্রতিক ঘটনাবলী</h3>
+                    <div class="modcontent clearfix">
+                        <div id="sj_meganew_16038672201518943368" class="sj-meganew ">
+                            <div class="meganew-wrap  meganew-rps01-1 meganew-rps02-1 meganew-rps03-1 meganew-rps04-1">
+                                <div class="meganew-box">
+                                    <div class="meganew-box-inner">
+                                        <div class="meganew-items theme1 ">
+                                            <div class="item-first">
+                                                <div class="item-image">
+                                                    <a href="index.php/component/k2/item/297-vestibulum-sit-amet-libero-vel"
+                                                       title="Vestibulum sit amet libero vel">
+                                                        <img src="~/images/recent.jpg" alt="cache/resized/recent.jpg" />
+                                                    </a>
+                                                    <div class="over-image"></div>
+                                                </div>
+                                                <div class="content-main">
+                                                    <div class="item-title">
+                                                        <a href="index.php/component/k2/item/297-vestibulum-sit-amet-libero-vel"
+                                                           title="Vestibulum sit amet libero vel">
+                                                            ২১ শে ফেব্রুয়ারী পালিত
+                                                        </a>
+                                                    </div>
+                                                    <ul class="by-date">
+                                                        <li class="athor"><span>প্রতিবেদন - </span>&nbsp;নাইম আহমেদ</li>
+                                                        <li>&ndash;</li>
+                                                        <!-- Date created -->
+                                                        <li class="time-ago">
+                                                            ১৩ দিন আগে
+                                                        </li>
+                                                    </ul>
+                                                    <div class="item-description">
+                                                        ভাষা আন্দোলন দিবস, শহীদ দিবস বা একুশে ফেব্রুয়ারী বাংলাদেশে পালিত একটি জাতীয় দিবস।
+                                                    </div>
+                                                    <div class="item-readmore">
+                                                        <a href="index.php/component/k2/item/297-vestibulum-sit-amet-libero-vel"
+                                                           title="Vestibulum sit amet libero vel">
+                                                            <i class="fa fa-check"></i><span>আরও পড়ুন...</span>
+                                                        </a>
+                                                    </div>
+                                                </div><!-- end content-main-->
+                                            </div>
+                                            <div class="item-other">
+                                                <ul class="otehr-link">
+                                                    <li class="row">
+                                                        <a href="index.php/component/k2/item/298-aliquam-eu-justo-eu-ipsum-ultricies" class="col-xs-7"
+                                                           title="Aliquam eu justo eu ipsum ultricies">
+                                                            ভালোবাসা দিবস পালিত
+                                                        </a>
+                                                        <ul class="by-date col-xs-5">
+                                                            <li class="athor"><span>প্রতিবেদন -</span>&nbsp;আনিস আহমেদ</li>
+                                                            <li>&ndash;</li>
+                                                            <!-- Date created -->
+                                                            <li class="time-ago">
+                                                                ২৩ দিন আগে
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="row">
+                                                        <a href="index.php/component/k2/item/296-curabitur-luctus-tortor-non-quam" class="col-xs-7"
+                                                           title="Curabitur luctus tortor non quam">
+                                                            পহেলা ফাল্গুন পালিত
+                                                        </a>
+                                                        <ul class="by-date col-xs-5">
+                                                            <li class="athor"><span>প্রতিবেদন -</span>&nbsp;তুহিন খান </li>
+                                                            <li>&ndash;</li>
+                                                            <!-- Date created -->
+                                                            <li class="time-ago">
+                                                                ২৪ দিন আগে
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="row">
+                                                        <a href="index.php/component/k2/item/295-aliquam-eget-arcu-magna" class="col-xs-7"
+                                                           title="Aliquam eget arcu magna">
+                                                            ৭ ই মার্চ পালিত
+                                                        </a>
+                                                        <ul class="by-date col-xs-5">
+                                                            <li class="athor"><span>প্রতিবেদন - </span>&nbsp;শাওন খান</li>
+                                                            <li>&ndash;</li>
+                                                            <!-- Date created -->
+                                                            <li class="time-ago">
+                                                                ২ দিন আগে
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clr1"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="top8" class="col-lg-3 col-sm-6">
+                <div class="module  ">
+                    <h3 class="modtitle">শিক্ষা সম্পর্কিত প্রশ্ন </h3>
+                    <div class="modcontent clearfix">
+
+                        <script type="text/javascript">
+                            jQuery(document).ready(function ($) {
+                                $('#sj_accordion_151894336886462479').sj_accordion({
+                                    items: '.acd-item',
+                                    heading: '.acd-header',
+                                    content: '.acd-content-wrap',
+                                    active_class: 'selected',
+                                    event: 'click',
+                                    delay: 200,
+                                    duration: 500,
+                                    active: '1'
+                                });
+
+                                var height_content = function () {
+                                    $('.acd-item', '#sj_accordion_151894336886462479').each(function () {
+                                        var inner = $('.acd-content-wrap-inner', $(this).filter('.selected'));
+                                        if (inner.length) {
+                                            var inner_height = inner.height();
+                                            inner.parent().css('height', inner_height);
+                                        }
+                                    });
+                                }
+                                if ($.browser.msie && parseInt($.browser.version, 10) <= 8) {
+
+                                } else {
+                                    $(window).resize(function () {
+                                        height_content();
+                                    });
+                                }
+                            });
+                        </script>
+                        <div id="sj_accordion_151894336886462479" class="sj-accordion">
+                            <div class="acd-items">
+                                <div class="acd-item">
+                                    <div class="acd-header">
+                                        <span>প্রা</span>থমিক শিক্ষার মান উন্নয়ন
+                                    </div>
+                                    <div class="acd-content-wrap ">
+                                        <div class="acd-content-wrap-inner ">
+                                            <div class="acd-description">
+                                                শিক্ষাই জাতির মেরুদণ্ড, শিক্ষা ছাড়া কোন জাতি উন্নতি করতে পারে না এমন বাক্য ছোট বেলা থেকেই আমরা বুঝে বা না বুঝে মুখস্থ করে এসেছি এবং এগুলো অতিশয় সত্য বাণীও বটে। আর এ মেরুদণ্ড যে কারখানায় তৈরি হয় তার নাম প্রাথমিক বিদ্যালয়।
+                                            </div>
+                                            <div class="acd-readmore">
+                                                <a href="index.php/joomla-pages-2/blog-joomla/single-article" title="নগর হাওলা সরকারি প্রাথমিক বিদ্যালয়">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="acd-item">
+                                    <div class="acd-header">
+                                        <span>বাং</span>লাদেশের কোন জেলার শিক্ষার হার বেশী?
+                                    </div>
+                                    <div class="acd-content-wrap ">
+                                        <div class="acd-content-wrap-inner ">
+                                            <div class="acd-description">
+                                                ২০ ডিসেম্বর, ২০১৩ - বাংলাদেশের বর্তমান শিক্ষার হার ৬৩%.শিক্ষার হার বরিশাল বিভাগে বেশী (৭৬.৭%). শিক্ষার হার সিলেট বিভাগে কম(৫৫%). শিক্ষার হার বরগুনা জেলায় বেশী(৮৬.৫৫%) ।শিক্ষার হার জামালপুর জেলায় কম (৩৯.৫৫%).
+                                            </div>
+                                            <div class="acd-readmore">
+                                                <a href="index.php/joomla-pages-2/blog-joomla/category-blog/category-blog-4-columns/85-aliquam-lobortis-cursus-erat" title="নগর হাওলা সরকারি প্রাথমিক বিদ্যালয় ">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="acd-item">
+                                    <div class="acd-header">
+                                        <span>শি</span>ক্ষা প্রতিষ্ঠানে ছাত্ররাজনীতি কতটুকু যুক্তিযুক্ত? এটাকে কি আপনি সমর্থন করেন?
+                                    </div>
+                                    <div class="acd-content-wrap ">
+                                        <div class="acd-content-wrap-inner ">
+                                            <div class="acd-description">
+                                                শিক্ষা প্রতিষ্ঠানে ছাত্র রাজনীতি ততোটাই যৌক্তিক যতটুকু একজন ছাত্র বা ছাত্রীর মেধা বিকাশে সাহায্য করে এবং রাজনীতি বিষয়ক বুদ্ধিমত্তার এবং জ্ঞানের ব্যাপ্তি ঘটায়। শুধু বাংলাদেশেই নয়, ছাত্র রাজনীতি অনেক বড় বড় দেশের বিশ্ববিদ্যালয়েই প্রচলিত আছে, কিন্তু তার ব্যবহার ও প্রভাব শুধু মাত্র প্রাতিষ্ঠানিক শিক্ষার মধ্যেই সীমিত রাখা হয়েছে। অবশ্যই তার কোনো কারণ আছে। রাজনীতি দেশ পর্যালোচনা এবং সমাজ ব্যবস্থাপনার সাথে ওতপ্রোতভাবে জড়িত এবং সে জন্যই রাজনীতির সঠিক ব্যবহার বোঝাটা গুরত্বপূর্ণ। শিক্ষা প্রতিষ্ঠানে ছাত্র রাজনীতি হয় সাধারনত ছাত্র/ছাত্রীদের সুবিধা, অসুবিধা এবং প্রাতিষ্ঠানিক ব্যবস্থাপনা সমালোচনার মধ্য দিয়ে।
+                                            </div>
+                                            <div class="acd-readmore">
+                                                <a href="index.php/joomla-pages-2/blog-joomla/category-blog/category-blog-4-columns/80-detus-laoreet-dignissim-vel" title="নগর হাওলা সরকারি প্রাথমিক বিদ্যালয়">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="acd-item">
+                                    <div class="acd-header">
+                                        <span>শি</span>ক্ষা ক্ষেত্রে বর্তমান সৃজনশীল পদ্ধতিকে আপনি কি সমর্থন করেন? কেন করেন?
+                                    </div>
+                                    <div class="acd-content-wrap ">
+                                        <div class="acd-content-wrap-inner ">
+                                            <div class="acd-description">
+                                                আমি সমর্থন করি কারণ,বাংলাদেশ সরকার সৃজনশীল প্রশ্ন পদ্ধতি প্রচলন করেছে যা শিক্ষার গুণগত মানোন্নয়নে গুরুত্বপূর্ণ ভূমিকা রাখছে বলে বিশেষজ্ঞরা মনে করেন। ২০১০ সাল থেকে শুরু হওয়া এ পদ্ধতি সম্পর্কে বর্তমানে শিক্ষা সংশ্লিষ্ট সকলে কমবেশি অবগত। একটি সার্থক সৃজনশীল প্রশ্নই কেবল পারে উক্ত উদ্দেশ্যকে সফল করতে। এ জন্য প্রশ্ন কর্তার এ পদ্ধতি সম্পর্কে সম্যক জ্ঞান থাকা আবশ্যক। এ পদ্ধতি কঠিন কিছু না, পাঠ্যের বিষয়বস্তু সম্পর্কে সুস্পষ্ট ধারণা থাকা একজন প্রশ্ন কর্তা (শিক্ষক) অতি সহজেই তৈরি করতে পারেন সার্থক সৃজনশীল প্রশ্ন। এ পদ্ধতি মুখস্থ নির্ভরতা কমিয়ে শিক্ষার্থীকে পাঠ্যমুখী করেছে। সেই সাথে নকল করার প্রবণতাও হরাস করেছে বহুলাংশে।
+                                            </div>
+                                            <div class="acd-readmore">
+                                                <a href="index.php/joomla-pages-2/blog-joomla/category-blog/category-blog-4-columns/91-haretra-faucibus-eu-laoreet-nunc" title="নগর হাওলা সরকারি প্রাথমিক বিদ্যালয়">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="acd-item">
+                                    <div class="acd-header">
+                                        <span>পৃ</span>থিবীতে মোট কতটা ভাষা আছে এবং তার মধ্যে কোন ভাষাটা সবচেয়ে জটিল ?
+                                    </div>
+                                    <div class="acd-content-wrap ">
+                                        <div class="acd-content-wrap-inner ">
+                                            <div class="acd-description">
+                                                পৃথিবীতে মোট ভাষার সংখ্যা সঠিকভাবে বলা সম্ভব নয় তবে জাতিসংঘের একটি প্রকাশনায় বলা হয়েছে পৃথিবীতে প্রায় ৭০০০ বা তাঁর বেশী ভাষা আছে।সবচেয়ে জটিল বা কঠিন ভাষা হিসেবে চীনের ম্যান্ডারিন ভাষা এবং আফগানিস্থানের পশতু ভাষার স্থান সবার আগে। পৃথিবীতে সবচেয়ে বেশী ব্যবহৃত ভাষার নাম ১/ ম্যান্দেরিয়ান ( ১বিলিয়ন) ২/ ইংলিশ (৫০৮ মিলিয়ন) ৩/ হিন্দুস্তানি (৪৯৭ মিলিয়ন) ৪/ স্পেনিশ (৩৯২ মিলিয়ন) ৫/ রাশিয়ান (২৭৭ মিলিয়ন) ৬/ আরবি (২৪৬ মিলিয়ন) ৭/ বাংলা (২১১মিলিয়ন) ৮/ পর্তুগীজ (১৯১ মিলিয়ন) ৯/ মালেয়ান- ইন্দনেশিয়ান (১৫৯ মিলিয়ন) ১০/ ফেন্স (১২৯ মিলিয়ন)।
+                                            </div>
+                                            <div class="acd-readmore">
+                                                <a href="index.php/joomla-pages-2/blog-joomla/category-blog/category-blog-4-columns/81-lacinia-sed-convallis-urna" title="নগর হাওলা সরকারি প্রাথমিক বিদ্যালয়">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="top9" class="col-lg-3 col-sm-6">
+                <div class="module  feature-teachers ">
+                    <h3 class="modtitle">প্রধান শিক্ষক </h3>
+                    <div class="modcontent clearfix">
+
+                        <div class="carousel-custommer">
+                            <div id="yt-extra-carousel1" style="width:100%; height:100%" class="yt-extra-carousel carousel slide pull-center" data-ride="carousel" data-interval='false'>
+                                <div class="carousel-inner">
+                                    <div class='item'>
+                                        <div class="customslider">
+                                            <div class="item-image"><img src="~/images/IMG_0137 .JPG" alt="" /></div>
+                                            <div class="content-main">
+                                                <h3 class="title">মো: মাঈন উদ্দিন</h3>
+                                                <span class="adred">সি ইন এড, বি এড</span>
+                                                <p class="post-commnets">শিক্ষক এবং সার্ভেয়ার। তিনি নগর হাওলা সরকারি প্রাথমিক বিদ্যালয়ের প্রধান শিক্ষক ।
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+       </div>
+
+</section>
+<section id="yt_spotlight6" class="block">
+    <div class="container">
+        <div class="row">
+            <div id="top10" class="col-sm-12">
+                <div class="module  style-me-scattered ">
+                    <div class="modcontent clearfix">
+                        <div id="sj_scatteredgallery_12881073201518943368376" class="sj-sg-gallery ">
+                            <section id="sg_photostack_376" class="sg-photostack  photostack-start "
+                                     style="height: 500px;">
+                                <div>
+                                    <a asp-controller="Home" asp-action="Gallery"><h1 style="line-height: 500px;text-align:center;color:white;border:1px solid; ">আমাদের বিদ্যালয়ে ঘুরে আসুন</h1></a>
+                                </div>
+                            </section>
+                        </div>
+
+                        <script type="text/javascript">
+                            var tag_id = document.getElementById('sj_scatteredgallery_12881073201518943368376');
+
+                            new Photostack(tag_id.querySelector('#sg_photostack_376'), {
+                                callback: function (item) {
+
+                                }
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

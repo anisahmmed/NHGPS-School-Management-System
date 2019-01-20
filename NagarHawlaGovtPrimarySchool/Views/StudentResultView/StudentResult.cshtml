@@ -1,0 +1,58 @@
+﻿@model NagarHawlaGovtPrimarySchool.Models.RelResultList
+
+@{
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+@{
+    ViewData["Active"] = "hidden";
+}
+@section asideOption {
+    <li class="">
+        <a asp-controller="StudentResultView" asp-action="StudentResult" asp-route-student_id="@ViewData["student_id"]" asp-route-exam_type="প্রথম সাময়িক">
+            <i class="fa fa-dashboard"></i> <span>প্রথম সাময়িক</span>
+        </a>
+    </li>
+    <li class="">
+        <a asp-controller="StudentResultView" asp-action="StudentResult" asp-route-student_id="@ViewData["student_id"]" asp-route-exam_type="দ্বিতীয় সাময়িক">
+            <i class="fa fa-dashboard"></i> <span>দ্বিতীয় সাময়িক</span>
+        </a>
+    </li>
+    <li class="">
+        <a asp-controller="StudentResultView" asp-action="StudentResult" asp-route-student_id="@ViewData["student_id"]" asp-route-exam_type="বার্ষিক">
+            <i class="fa fa-dashboard"></i> <span>বার্ষিক</span>
+        </a>
+    </li>
+}
+
+<div id="printableArea">
+    <div class="container">
+        <h3>আইডি : <span style="color:green;">@ViewData["student_id"]</span></h3>
+        <h1></h1><h1></h1><h1></h1>
+        <table class="custom_admin_student_information_table">
+            <tr>
+                <th>বিষয় </th>
+                <th>প্রাপ্ত  নাম্বার</th>
+            </tr>
+            @foreach (var data in Model.RelResultAll)
+            {
+                <tr>
+                    <td class="showDetails pointer">@data.subject_name</td>
+                    <td class="showDetails pointer">@data.marks</td>
+                </tr>
+            }
+
+        </table>
+
+    </div>
+</div>
+</br><center><button style="color:green;" onclick="printDiv('printableArea')"><b>Print!</b></button></center>
+		  </br>
+<script type="text/javascript">
+function printDiv(divName) {
+    var printContents = document.getElementById(divName).innerHTML;
+    var originalContents = document.body.innerHTML;
+    document.body.innerHTML = printContents;
+    window.print();
+    document.body.innerHTML = originalContents;
+    }
+</script>

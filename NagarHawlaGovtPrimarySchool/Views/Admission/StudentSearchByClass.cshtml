@@ -1,0 +1,89 @@
+﻿@model NagarHawlaGovtPrimarySchool.Models.StudentList
+
+@{
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+@{
+    ViewData["Active"] = "";
+    ViewData["controller"] = "Admission";
+    ViewData["method"] = "Admission";
+    ViewData["option"] = "ভর্তি";
+}
+@section asideOption {
+    <li class="active">
+        <a asp-controller="Admission" asp-action="SearchStudentInformation">
+            <i class="fa fa-dashboard"></i> <span>শিক্ষার্থীদের তথ্য</span>
+        </a>
+    </li>
+}
+
+    <div class="container">
+        <table class="custom_admin_student_information_table">
+            <tr>
+                <th>স্টুডেন্ট আইডি </th>
+                <th>নাম বাংলা</th>
+                <th>নাম ইংরেজীত</th>
+                <th>মোবাইল নাম্বার</th>
+                <th>শাখা</th>
+                <th>অন্যান্য</th>
+            </tr>
+            @foreach (var data in Model.StudentAll)
+            {
+                <tr title="Click Here to See Details">
+                    <td class="showDetails pointer">@data.StudentId</td>
+                    <td class="showDetails pointer">@data.StudentNameBangla</td>
+                    <td class="showDetails pointer">@data.StudentNameEnglish</td>
+                    <td class="showDetails pointer">@data.FatherMobile</td>
+                    <td class="showDetails pointer">@data.Section</td>
+                    <td class="showDetails pointer">
+
+                        <a asp-controller="Admission" asp-action="StudentInformationIndividual" asp-route-detail="@data.StudentId">বিস্তারিত  </a>|
+                        <a asp-controller="Admission" asp-action="StudentInformationIndividualUpdate"
+                           asp-route-update="@data.StudentId" asp-route-ClassName="@data.ClassName">আপডেট</a>|
+                        <a asp-controller="Admission" asp-action="StudentInformationIndividualDelete"
+                           asp-route-delete="@data.StudentId">ডিলিট</a>
+
+                    </td>
+                </tr>
+            }
+
+        </table>
+</div>
+
+        <div id="printableArea" style="opacity:0;display:none;visibility:hidden;">
+            <div class="container">
+                <table class="custom_admin_student_information_table">
+                    <tr>
+                        <th>স্টুডেন্ট আইডি </th>
+                        <th>নাম বাংলা</th>
+                        <th>নাম ইংরেজীত</th>
+                        <th>মোবাইল নাম্বার</th>
+                        <th>শাখা</th>
+                    </tr>
+                    @foreach (var data in Model.StudentAll)
+                    {
+                        <tr title="Click Here to See Details">
+                            <td class="showDetails pointer">@data.StudentId</td>
+                            <td class="showDetails pointer">@data.StudentNameBangla</td>
+                            <td class="showDetails pointer">@data.StudentNameEnglish</td>
+                            <td class="showDetails pointer">@data.FatherMobile</td>
+                            <td class="showDetails pointer">@data.Section</td>
+                        </tr>
+                    }
+
+                </table>
+
+            </div>
+            </div>
+
+            </br><center><button style="color:green;" onclick="printDiv('printableArea')"><b>Print!</b></button></center>
+            </br>
+            <script type="text/javascript">
+                function printDiv(divName) {
+                    var printContents = document.getElementById(divName).innerHTML;
+                    var originalContents = document.body.innerHTML;
+                    document.body.innerHTML = printContents;
+                    window.print();
+                    document.body.innerHTML = originalContents;
+                }
+            </script>

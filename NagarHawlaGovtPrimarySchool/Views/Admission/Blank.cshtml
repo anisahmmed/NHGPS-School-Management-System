@@ -1,0 +1,16 @@
+﻿@{
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+@{
+    ViewData["Active"] = "";
+    ViewData["controller"] = "Admission";
+    ViewData["method"] = "Admission";
+    ViewData["option"] = "ভর্তি";
+}
+@section asideOption {
+    <li class="">
+        <a asp-controller="Admission" asp-action="SearchStudentInformation">
+            <i class="fa fa-dashboard"></i> <span>শিক্ষার্থীদের তথ্য</span>
+        </a>
+    </li>
+}

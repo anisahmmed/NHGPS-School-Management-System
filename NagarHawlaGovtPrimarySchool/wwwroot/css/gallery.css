@@ -1,0 +1,27 @@
+
+th{
+	font-size:24px;
+}
+
+table {
+    width: 75%;
+}
+td{
+	padding:13px;
+}
+p{
+    color:black;
+    text-align:center;
+}
+body {
+    font-family: sans-serif;
+}
+.gallery img {
+        filter: scale(100%);
+        transition: 1s;
+ }
+
+.gallery img:hover {
+            filter: scale(0);
+            transform: scale(1.1);
+ }
